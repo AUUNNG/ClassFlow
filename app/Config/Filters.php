@@ -26,6 +26,9 @@ class Filters extends BaseConfig
         'secureheaders' => SecureHeaders::class,
         'auth'          => Auth::class,
         'noauth'        => NoAuth::class,
+        'student'       => \App\Filters\Student::class,
+        'teacher'       => \App\Filters\Teacher::class,
+        'admin'         => \App\Filters\Admin::class,
     ];
 
     /**
@@ -65,5 +68,9 @@ class Filters extends BaseConfig
      * Example:
      * 'isLoggedIn' => ['before' => ['account/*', 'profiles/*']]
      */
-    public array $filters = [];
+    public array $filters = [
+        'student' => ['before' => ['student']],
+        'teacher' => ['before' => ['teacher']],
+        'admin' => ['before' => ['admin']],
+    ];
 }

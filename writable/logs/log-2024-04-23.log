@@ -1,0 +1,1298 @@
+ERROR - 2024-04-23 02:30:31 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('123', 'username', Array, NULL, 'username')
+#6 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', '123', Array, Array)
+#7 C:\xampp\htdocs\ClassFlow\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(44): App\Controllers\DashboardController->register(Array)
+#10 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#11 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#12 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\ClassFlow\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('123', 'username', Array, NULL, 'username')
+#5 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', '123', Array, Array)
+#6 C:\xampp\htdocs\ClassFlow\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(44): App\Controllers\DashboardController->register(Array)
+#9 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#10 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#11 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2024-04-23 02:30:31 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('123', 'username', [...], null, 'username')
+ 5 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', '123', [...], [...])
+ 6 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate([...])
+ 8 APPPATH\Controllers\DashboardController.php(44): App\Controllers\DashboardController->register([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-04-23 02:50:50 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('1', 'username', Array, NULL, 'username')
+#6 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', '1', Array, Array)
+#7 C:\xampp\htdocs\ClassFlow\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(44): App\Controllers\DashboardController->register(Array)
+#10 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#11 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#12 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\ClassFlow\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('1', 'username', Array, NULL, 'username')
+#5 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', '1', Array, Array)
+#6 C:\xampp\htdocs\ClassFlow\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(44): App\Controllers\DashboardController->register(Array)
+#9 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#10 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#11 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2024-04-23 02:50:50 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('1', 'username', [...], null, 'username')
+ 5 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', '1', [...], [...])
+ 6 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate([...])
+ 8 APPPATH\Controllers\DashboardController.php(44): App\Controllers\DashboardController->register([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-04-23 02:50:54 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('1', 'username', Array, NULL, 'username')
+#6 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', '1', Array, Array)
+#7 C:\xampp\htdocs\ClassFlow\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(44): App\Controllers\DashboardController->register(Array)
+#10 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#11 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#12 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\ClassFlow\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('1', 'username', Array, NULL, 'username')
+#5 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', '1', Array, Array)
+#6 C:\xampp\htdocs\ClassFlow\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(44): App\Controllers\DashboardController->register(Array)
+#9 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#10 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#11 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2024-04-23 02:50:54 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('1', 'username', [...], null, 'username')
+ 5 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', '1', [...], [...])
+ 6 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate([...])
+ 8 APPPATH\Controllers\DashboardController.php(44): App\Controllers\DashboardController->register([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-04-23 03:11:07 --> mysqli_sql_exception: Table 'classflow_2567.users' doesn't exist in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('123', 'username', Array, NULL, 'username')
+#6 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', '123', Array, Array)
+#7 C:\xampp\htdocs\ClassFlow\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(44): App\Controllers\DashboardController->register(Array)
+#10 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#11 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#12 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-04-23 03:11:07 --> Table 'classflow_2567.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1
+FROM `users`
+WHERE `username` = \'123\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `users`
+WHERE `username` = \'123\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `users`
+WHERE `username` = \'123\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('123', 'username', [...], null, 'username')
+ 7 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', '123', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate([...])
+10 APPPATH\Controllers\DashboardController.php(44): App\Controllers\DashboardController->register([...])
+11 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+12 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+13 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-04-23 03:11:12 --> mysqli_sql_exception: Table 'classflow_2567.users' doesn't exist in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('123', 'username', Array, NULL, 'username')
+#6 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', '123', Array, Array)
+#7 C:\xampp\htdocs\ClassFlow\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(44): App\Controllers\DashboardController->register(Array)
+#10 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#11 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#12 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-04-23 03:11:12 --> Table 'classflow_2567.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1
+FROM `users`
+WHERE `username` = \'123\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `users`
+WHERE `username` = \'123\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `users`
+WHERE `username` = \'123\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('123', 'username', [...], null, 'username')
+ 7 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', '123', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate([...])
+10 APPPATH\Controllers\DashboardController.php(44): App\Controllers\DashboardController->register([...])
+11 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+12 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+13 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-04-23 03:11:51 --> mysqli_sql_exception: Table 'classflow_2567.users' doesn't exist in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('123', 'username', Array, NULL, 'username')
+#6 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', '123', Array, Array)
+#7 C:\xampp\htdocs\ClassFlow\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(44): App\Controllers\DashboardController->register(Array)
+#10 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#11 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#12 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-04-23 03:11:51 --> Table 'classflow_2567.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1
+FROM `users`
+WHERE `username` = \'123\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `users`
+WHERE `username` = \'123\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `users`
+WHERE `username` = \'123\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('123', 'username', [...], null, 'username')
+ 7 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', '123', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate([...])
+10 APPPATH\Controllers\DashboardController.php(44): App\Controllers\DashboardController->register([...])
+11 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+12 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+13 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-04-23 03:12:45 --> mysqli_sql_exception: Table 'classflow_2567.users' doesn't exist in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', Array, NULL, 'username')
+#6 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', Array, Array)
+#7 C:\xampp\htdocs\ClassFlow\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(44): App\Controllers\DashboardController->register(Array)
+#10 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#11 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#12 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-04-23 03:12:45 --> Table 'classflow_2567.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', [...], null, 'username')
+ 7 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate([...])
+10 APPPATH\Controllers\DashboardController.php(44): App\Controllers\DashboardController->register([...])
+11 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+12 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+13 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-04-23 03:13:10 --> mysqli_sql_exception: Table 'classflow_2567.users' doesn't exist in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', Array, NULL, 'username')
+#6 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', Array, Array)
+#7 C:\xampp\htdocs\ClassFlow\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(44): App\Controllers\DashboardController->register(Array)
+#10 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#11 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#12 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-04-23 03:13:10 --> Table 'classflow_2567.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', [...], null, 'username')
+ 7 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate([...])
+10 APPPATH\Controllers\DashboardController.php(44): App\Controllers\DashboardController->register([...])
+11 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+12 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+13 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-04-23 03:13:11 --> mysqli_sql_exception: Table 'classflow_2567.users' doesn't exist in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', Array, NULL, 'username')
+#6 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', Array, Array)
+#7 C:\xampp\htdocs\ClassFlow\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(44): App\Controllers\DashboardController->register(Array)
+#10 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#11 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#12 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-04-23 03:13:11 --> Table 'classflow_2567.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', [...], null, 'username')
+ 7 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate([...])
+10 APPPATH\Controllers\DashboardController.php(44): App\Controllers\DashboardController->register([...])
+11 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+12 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+13 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-04-23 03:13:21 --> mysqli_sql_exception: Table 'classflow_2567.users' doesn't exist in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', Array, NULL, 'username')
+#6 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', Array, Array)
+#7 C:\xampp\htdocs\ClassFlow\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(44): App\Controllers\DashboardController->register(Array)
+#10 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#11 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#12 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-04-23 03:13:21 --> Table 'classflow_2567.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', [...], null, 'username')
+ 7 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate([...])
+10 APPPATH\Controllers\DashboardController.php(44): App\Controllers\DashboardController->register([...])
+11 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+12 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+13 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-04-23 03:16:03 --> mysqli_sql_exception: Table 'classflow_2567.users' doesn't exist in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', Array, NULL, 'username')
+#6 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', Array, Array)
+#7 C:\xampp\htdocs\ClassFlow\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(44): App\Controllers\DashboardController->register(Array)
+#10 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#11 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#12 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-04-23 03:16:03 --> Table 'classflow_2567.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', [...], null, 'username')
+ 7 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate([...])
+10 APPPATH\Controllers\DashboardController.php(44): App\Controllers\DashboardController->register([...])
+11 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+12 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+13 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-23 03:26:37 --> syntax error, unexpected '$datas' (T_VARIABLE)
+in APPPATH\Controllers\DashboardController.php on line 106.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ClassFlow\\app\\Controllers\\DashboardController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\DashboardController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\DashboardController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\DashboardController')
+ 5 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\DashboardController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-23 03:26:38 --> syntax error, unexpected '$datas' (T_VARIABLE)
+in APPPATH\Controllers\DashboardController.php on line 106.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ClassFlow\\app\\Controllers\\DashboardController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\DashboardController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\DashboardController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\DashboardController')
+ 5 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\DashboardController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-04-23 03:34:36 --> mysqli_sql_exception: Table 'classflow_2567.users' doesn't exist in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', Array, NULL, 'username')
+#6 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', Array, Array)
+#7 C:\xampp\htdocs\ClassFlow\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(45): App\Controllers\DashboardController->register(Array)
+#10 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#11 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#12 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-04-23 03:34:36 --> Table 'classflow_2567.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', [...], null, 'username')
+ 7 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\DashboardController.php(87): CodeIgniter\Controller->validate([...])
+10 APPPATH\Controllers\DashboardController.php(45): App\Controllers\DashboardController->register([...])
+11 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+12 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+13 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-23 03:35:16 --> Argument 1 passed to CodeIgniter\Model::__construct() must be an instance of CodeIgniter\Database\ConnectionInterface or null, array given, called in C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php on line 102
+in SYSTEMPATH\Model.php on line 150.
+ 1 APPPATH\Controllers\DashboardController.php(102): CodeIgniter\Model->__construct([...])
+ 2 APPPATH\Controllers\DashboardController.php(45): App\Controllers\DashboardController->register([...])
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-04-23 03:38:57 --> mysqli_sql_exception: Table 'classflow_2567.users' doesn't exist in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', Array, NULL, 'username')
+#6 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', Array, Array)
+#7 C:\xampp\htdocs\ClassFlow\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(88): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(46): App\Controllers\DashboardController->register(Array)
+#10 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#11 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#12 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-04-23 03:38:57 --> Table 'classflow_2567.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', [...], null, 'username')
+ 7 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\DashboardController.php(88): CodeIgniter\Controller->validate([...])
+10 APPPATH\Controllers\DashboardController.php(46): App\Controllers\DashboardController->register([...])
+11 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+12 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+13 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-04-23 03:39:15 --> mysqli_sql_exception: Table 'classflow_2567.users' doesn't exist in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', Array, NULL, 'username')
+#6 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', Array, Array)
+#7 C:\xampp\htdocs\ClassFlow\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(88): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(46): App\Controllers\DashboardController->register(Array)
+#10 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#11 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#12 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-04-23 03:39:15 --> Table 'classflow_2567.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', [...], null, 'username')
+ 7 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\DashboardController.php(88): CodeIgniter\Controller->validate([...])
+10 APPPATH\Controllers\DashboardController.php(46): App\Controllers\DashboardController->register([...])
+11 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+12 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+13 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-04-23 03:40:12 --> mysqli_sql_exception: Table 'classflow_2567.users' doesn't exist in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', Array, NULL, 'username')
+#6 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', Array, Array)
+#7 C:\xampp\htdocs\ClassFlow\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(88): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(46): App\Controllers\DashboardController->register(Array)
+#10 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#11 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#12 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-04-23 03:40:12 --> Table 'classflow_2567.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', [...], null, 'username')
+ 7 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\DashboardController.php(88): CodeIgniter\Controller->validate([...])
+10 APPPATH\Controllers\DashboardController.php(46): App\Controllers\DashboardController->register([...])
+11 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+12 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+13 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-04-23 03:41:26 --> mysqli_sql_exception: Unknown column 'confirmpass' in 'field list' in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ad...', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ad...')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ad...')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ad...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\app\Models\DashboardModel.php(54): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(102): App\Models\DashboardModel->register(Array)
+#6 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(45): App\Controllers\DashboardController->register(Array)
+#7 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#8 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#9 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-04-23 03:41:26 --> Unknown column 'confirmpass' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `admins` (`firstname`, `lastname`, `username`, `pass`, `confirmpass`, `create_date`) VALUES (\'Yuttapoom\', \'Haphanom\', \'admin\', \'$2y$10$e0xizPRXsHH26cEawhgm5eMwID4vQXe/JNwDlR6Jr1Je1/Y7Hh7Me\', \'12345678\', \'2024-04-23 03:41:26\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `admins` (`firstname`, `lastname`, `username`, `pass`, `confirmpass`, `create_date`) VALUES (\'Yuttapoom\', \'Haphanom\', \'admin\', \'$2y$10$e0xizPRXsHH26cEawhgm5eMwID4vQXe/JNwDlR6Jr1Je1/Y7Hh7Me\', \'12345678\', \'2024-04-23 03:41:26\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `admins` (`firstname`, `lastname`, `username`, `pass`, `confirmpass`, `create_date`) VALUES (\'Yuttapoom\', \'Haphanom\', \'admin\', \'$2y$10$e0xizPRXsHH26cEawhgm5eMwID4vQXe/JNwDlR6Jr1Je1/Y7Hh7Me\', \'12345678\', \'2024-04-23 03:41:26\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `admins` (`firstname`, `lastname`, `username`, `pass`, `confirmpass`, `create_date`) VALUES (:firstname:, :lastname:, :username:, :pass:, :confirmpass:, :create_date:)', [...], false)
+ 5 APPPATH\Models\DashboardModel.php(54): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\DashboardController.php(102): App\Models\DashboardModel->register([...])
+ 7 APPPATH\Controllers\DashboardController.php(45): App\Controllers\DashboardController->register([...])
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-04-23 03:58:07 --> mysqli_sql_exception: Table 'classflow_2567.users' doesn't exist in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', Array, NULL, 'username')
+#6 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', Array, Array)
+#7 C:\xampp\htdocs\ClassFlow\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(90): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(45): App\Controllers\DashboardController->register(Array)
+#10 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#11 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#12 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-04-23 03:58:07 --> Table 'classflow_2567.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `users`
+WHERE `username` = \'admin\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin', 'username', [...], null, 'username')
+ 7 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admin', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\DashboardController.php(90): CodeIgniter\Controller->validate([...])
+10 APPPATH\Controllers\DashboardController.php(45): App\Controllers\DashboardController->register([...])
+11 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+12 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+13 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-04-23 03:58:17 --> mysqli_sql_exception: Table 'classflow_2567.users' doesn't exist in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('admins', 'username', Array, NULL, 'username')
+#6 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admins', Array, Array)
+#7 C:\xampp\htdocs\ClassFlow\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(90): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(45): App\Controllers\DashboardController->register(Array)
+#10 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#11 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#12 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-04-23 03:58:17 --> Table 'classflow_2567.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1
+FROM `users`
+WHERE `username` = \'admins\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `users`
+WHERE `username` = \'admins\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `users`
+WHERE `username` = \'admins\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('admins', 'username', [...], null, 'username')
+ 7 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admins', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\DashboardController.php(90): CodeIgniter\Controller->validate([...])
+10 APPPATH\Controllers\DashboardController.php(45): App\Controllers\DashboardController->register([...])
+11 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+12 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+13 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-04-23 03:58:28 --> mysqli_sql_exception: Table 'classflow_2567.users' doesn't exist in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('admins', 'username', Array, NULL, 'username')
+#6 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admins', Array, Array)
+#7 C:\xampp\htdocs\ClassFlow\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(90): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(45): App\Controllers\DashboardController->register(Array)
+#10 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#11 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#12 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-04-23 03:58:28 --> Table 'classflow_2567.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1
+FROM `users`
+WHERE `username` = \'admins\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `users`
+WHERE `username` = \'admins\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `users`
+WHERE `username` = \'admins\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('admins', 'username', [...], null, 'username')
+ 7 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', 'admins', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\DashboardController.php(90): CodeIgniter\Controller->validate([...])
+10 APPPATH\Controllers\DashboardController.php(45): App\Controllers\DashboardController->register([...])
+11 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+12 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+13 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-04-23 03:59:13 --> mysqli_sql_exception: Table 'classflow_2567.users' doesn't exist in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('1234', 'username', Array, NULL, 'username')
+#6 C:\xampp\htdocs\ClassFlow\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', '1234', Array, Array)
+#7 C:\xampp\htdocs\ClassFlow\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(90): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(45): App\Controllers\DashboardController->register(Array)
+#10 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#11 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#12 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-04-23 03:59:13 --> Table 'classflow_2567.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1
+FROM `users`
+WHERE `username` = \'1234\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `users`
+WHERE `username` = \'1234\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `users`
+WHERE `username` = \'1234\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('1234', 'username', [...], null, 'username')
+ 7 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('username', 'username', '1234', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\DashboardController.php(90): CodeIgniter\Controller->validate([...])
+10 APPPATH\Controllers\DashboardController.php(45): App\Controllers\DashboardController->register([...])
+11 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+12 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+13 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-04-23 04:00:25 --> mysqli_sql_exception: Unknown column 'confirmpass' in 'field list' in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ad...', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ad...')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ad...')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ad...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\app\Models\DashboardModel.php(57): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(105): App\Models\DashboardModel->register(Array)
+#6 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(45): App\Controllers\DashboardController->register(Array)
+#7 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#8 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#9 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-04-23 04:00:25 --> Unknown column 'confirmpass' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `admins` (`firstname`, `lastname`, `username`, `pass`, `confirmpass`, `create_date`) VALUES (\'Yuttapoom\', \'Haphanom\', \'admin\', \'$2y$10$AGFvsjzKTZUjmuiXYKtalushnKyPxBir9Zj4Y6oEHeAs.opYZ0Zxe\', \'12345678\', \'2024-04-23 04:00:25\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `admins` (`firstname`, `lastname`, `username`, `pass`, `confirmpass`, `create_date`) VALUES (\'Yuttapoom\', \'Haphanom\', \'admin\', \'$2y$10$AGFvsjzKTZUjmuiXYKtalushnKyPxBir9Zj4Y6oEHeAs.opYZ0Zxe\', \'12345678\', \'2024-04-23 04:00:25\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `admins` (`firstname`, `lastname`, `username`, `pass`, `confirmpass`, `create_date`) VALUES (\'Yuttapoom\', \'Haphanom\', \'admin\', \'$2y$10$AGFvsjzKTZUjmuiXYKtalushnKyPxBir9Zj4Y6oEHeAs.opYZ0Zxe\', \'12345678\', \'2024-04-23 04:00:25\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `admins` (`firstname`, `lastname`, `username`, `pass`, `confirmpass`, `create_date`) VALUES (:firstname:, :lastname:, :username:, :pass:, :confirmpass:, :create_date:)', [...], false)
+ 5 APPPATH\Models\DashboardModel.php(57): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\DashboardController.php(105): App\Models\DashboardModel->register([...])
+ 7 APPPATH\Controllers\DashboardController.php(45): App\Controllers\DashboardController->register([...])
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-04-23 05:26:09 --> mysqli_sql_exception: Unknown column 'confirmpass' in 'field list' in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ad...', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ad...')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ad...')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ad...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\app\Models\DashboardModel.php(59): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(136): App\Models\DashboardModel->register(Array)
+#6 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(45): App\Controllers\DashboardController->register(Array)
+#7 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#8 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#9 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-04-23 05:26:09 --> Unknown column 'confirmpass' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `admins` (`firstname`, `lastname`, `username`, `pass`, `confirmpass`, `create_date`) VALUES (\'Yuttapoom\', \'Haphanom\', \'admins\', \'$2y$10$su9qmlJNknGy.I6Xim6lkeE0hVjI48Cm5N3nf50RvOodtN8MwCYBC\', \'12345678\', \'2024-04-23 05:26:09\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `admins` (`firstname`, `lastname`, `username`, `pass`, `confirmpass`, `create_date`) VALUES (\'Yuttapoom\', \'Haphanom\', \'admins\', \'$2y$10$su9qmlJNknGy.I6Xim6lkeE0hVjI48Cm5N3nf50RvOodtN8MwCYBC\', \'12345678\', \'2024-04-23 05:26:09\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `admins` (`firstname`, `lastname`, `username`, `pass`, `confirmpass`, `create_date`) VALUES (\'Yuttapoom\', \'Haphanom\', \'admins\', \'$2y$10$su9qmlJNknGy.I6Xim6lkeE0hVjI48Cm5N3nf50RvOodtN8MwCYBC\', \'12345678\', \'2024-04-23 05:26:09\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `admins` (`firstname`, `lastname`, `username`, `pass`, `confirmpass`, `create_date`) VALUES (:firstname:, :lastname:, :username:, :pass:, :confirmpass:, :create_date:)', [...], false)
+ 5 APPPATH\Models\DashboardModel.php(59): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\DashboardController.php(136): App\Models\DashboardModel->register([...])
+ 7 APPPATH\Controllers\DashboardController.php(45): App\Controllers\DashboardController->register([...])
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-04-23 05:26:21 --> mysqli_sql_exception: Unknown column 'confirmpass' in 'field list' in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ad...', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ad...')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ad...')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ad...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\app\Models\DashboardModel.php(59): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(136): App\Models\DashboardModel->register(Array)
+#6 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(45): App\Controllers\DashboardController->register(Array)
+#7 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#8 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#9 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-04-23 05:26:21 --> Unknown column 'confirmpass' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `admins` (`firstname`, `lastname`, `username`, `pass`, `confirmpass`, `create_date`) VALUES (\'Yuttapoom\', \'Haphanom\', \'admin1\', \'$2y$10$nZ9/cGBr5R/piEKkw4kAcOGA1.XWoxV9/YRdKceKWOtAdosQSI/XO\', \'12345678\', \'2024-04-23 05:26:21\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `admins` (`firstname`, `lastname`, `username`, `pass`, `confirmpass`, `create_date`) VALUES (\'Yuttapoom\', \'Haphanom\', \'admin1\', \'$2y$10$nZ9/cGBr5R/piEKkw4kAcOGA1.XWoxV9/YRdKceKWOtAdosQSI/XO\', \'12345678\', \'2024-04-23 05:26:21\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `admins` (`firstname`, `lastname`, `username`, `pass`, `confirmpass`, `create_date`) VALUES (\'Yuttapoom\', \'Haphanom\', \'admin1\', \'$2y$10$nZ9/cGBr5R/piEKkw4kAcOGA1.XWoxV9/YRdKceKWOtAdosQSI/XO\', \'12345678\', \'2024-04-23 05:26:21\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `admins` (`firstname`, `lastname`, `username`, `pass`, `confirmpass`, `create_date`) VALUES (:firstname:, :lastname:, :username:, :pass:, :confirmpass:, :create_date:)', [...], false)
+ 5 APPPATH\Models\DashboardModel.php(59): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\DashboardController.php(136): App\Models\DashboardModel->register([...])
+ 7 APPPATH\Controllers\DashboardController.php(45): App\Controllers\DashboardController->register([...])
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-04-23 05:27:29 --> mysqli_sql_exception: Unknown column 'confirmpass' in 'field list' in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ad...', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ad...')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ad...')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ad...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\app\Models\DashboardModel.php(59): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(136): App\Models\DashboardModel->register(Array)
+#6 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(45): App\Controllers\DashboardController->register(Array)
+#7 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#8 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#9 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-04-23 05:27:29 --> Unknown column 'confirmpass' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `admins` (`firstname`, `lastname`, `username`, `pass`, `confirmpass`, `create_date`) VALUES (\'Yuttapoom\', \'Haphanom\', \'admins\', \'$2y$10$4UyxEdNZ3fwM6S.yFRrjzOik9EhUxGSwbYgr6LCMpMD7chGeVAr0u\', \'12345678\', \'2024-04-23 05:27:29\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `admins` (`firstname`, `lastname`, `username`, `pass`, `confirmpass`, `create_date`) VALUES (\'Yuttapoom\', \'Haphanom\', \'admins\', \'$2y$10$4UyxEdNZ3fwM6S.yFRrjzOik9EhUxGSwbYgr6LCMpMD7chGeVAr0u\', \'12345678\', \'2024-04-23 05:27:29\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `admins` (`firstname`, `lastname`, `username`, `pass`, `confirmpass`, `create_date`) VALUES (\'Yuttapoom\', \'Haphanom\', \'admins\', \'$2y$10$4UyxEdNZ3fwM6S.yFRrjzOik9EhUxGSwbYgr6LCMpMD7chGeVAr0u\', \'12345678\', \'2024-04-23 05:27:29\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `admins` (`firstname`, `lastname`, `username`, `pass`, `confirmpass`, `create_date`) VALUES (:firstname:, :lastname:, :username:, :pass:, :confirmpass:, :create_date:)', [...], false)
+ 5 APPPATH\Models\DashboardModel.php(59): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\DashboardController.php(136): App\Models\DashboardModel->register([...])
+ 7 APPPATH\Controllers\DashboardController.php(45): App\Controllers\DashboardController->register([...])
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-04-23 05:50:45 --> mysqli_sql_exception: Unknown column 'confirmpass' in 'field list' in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ad...', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ad...')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ad...')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ad...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\app\Models\DashboardModel.php(60): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(144): App\Models\DashboardModel->register(Array)
+#6 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(45): App\Controllers\DashboardController->register(Array)
+#7 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#8 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#9 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2024-04-23 05:50:51 --> mysqli_sql_exception: Unknown column 'confirmpass' in 'field list' in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ad...', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ad...')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ad...')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ad...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\app\Models\DashboardModel.php(60): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(144): App\Models\DashboardModel->register(Array)
+#6 C:\xampp\htdocs\ClassFlow\app\Controllers\DashboardController.php(45): App\Controllers\DashboardController->register(Array)
+#7 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\DashboardController->root('register')
+#8 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+#9 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-04-23 08:01:16 --> Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-23 08:59:36 --> Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-23 08:59:50 --> Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-23 08:59:51 --> Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-23 09:00:40 --> Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-23 09:01:15 --> Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-23 09:02:20 --> Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-23 09:02:34 --> Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-23 09:02:38 --> Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-23 09:02:57 --> Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-23 09:03:00 --> Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-23 09:03:01 --> "admin" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-23 09:03:02 --> "admin" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-23 09:03:04 --> "admin" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-23 09:04:39 --> Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-23 09:22:09 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\DashboardController.php on line 102.
+ 1 APPPATH\Controllers\DashboardController.php(45): App\Controllers\DashboardController->login([...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('login', 'login')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-23 09:23:48 --> Cannot use object of type stdClass as array
+in APPPATH\Models\DashboardModel.php on line 55.
+ 1 APPPATH\Controllers\DashboardController.php(100): App\Models\DashboardModel->login('admin', '12345678')
+ 2 APPPATH\Controllers\DashboardController.php(45): App\Controllers\DashboardController->login([...])
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('login', 'login')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-23 09:30:06 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\DashboardController.php on line 104.
+ 1 APPPATH\Controllers\DashboardController.php(45): App\Controllers\DashboardController->login([...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->root('login', 'login')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')

@@ -1,0 +1,160 @@
+CRITICAL - 2024-04-22 12:07:17 --> Invalid file: "teacher/register.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('teacher/register.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('teacher/register', [], true)
+ 3 APPPATH\Controllers\TeacherController.php(51): view('teacher/register')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\TeacherController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-22 12:07:42 --> Invalid file: "teacher/register.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('teacher/register.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('teacher/register', [], true)
+ 3 APPPATH\Controllers\TeacherController.php(51): view('teacher/register')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\TeacherController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-22 12:07:42 --> Invalid file: "teacher/register.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('teacher/register.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('teacher/register', [], true)
+ 3 APPPATH\Controllers\TeacherController.php(51): view('teacher/register')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\TeacherController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-22 12:07:43 --> Invalid file: "teacher/register.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('teacher/register.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('teacher/register', [], true)
+ 3 APPPATH\Controllers\TeacherController.php(51): view('teacher/register')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\TeacherController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-22 12:07:43 --> Invalid file: "teacher/register.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('teacher/register.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('teacher/register', [], true)
+ 3 APPPATH\Controllers\TeacherController.php(51): view('teacher/register')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\TeacherController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-22 12:07:43 --> Invalid file: "teacher/register.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('teacher/register.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('teacher/register', [], true)
+ 3 APPPATH\Controllers\TeacherController.php(51): view('teacher/register')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\TeacherController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-22 12:07:43 --> Invalid file: "teacher/register.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('teacher/register.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('teacher/register', [], true)
+ 3 APPPATH\Controllers\TeacherController.php(51): view('teacher/register')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\TeacherController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-22 12:38:48 --> Too few arguments to function App\Controllers\AuthController::login(), 0 passed in C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\AuthController.php on line 54.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-22 12:38:49 --> Too few arguments to function App\Controllers\AuthController::login(), 0 passed in C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\AuthController.php on line 54.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-22 12:38:49 --> Too few arguments to function App\Controllers\AuthController::login(), 0 passed in C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\AuthController.php on line 54.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-22 12:38:49 --> Too few arguments to function App\Controllers\AuthController::login(), 0 passed in C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\AuthController.php on line 54.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-22 12:38:49 --> Too few arguments to function App\Controllers\AuthController::login(), 0 passed in C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\AuthController.php on line 54.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-22 12:38:49 --> Too few arguments to function App\Controllers\AuthController::login(), 0 passed in C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\AuthController.php on line 54.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-22 12:38:49 --> Too few arguments to function App\Controllers\AuthController::login(), 0 passed in C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\AuthController.php on line 54.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-22 12:38:50 --> Too few arguments to function App\Controllers\AuthController::login(), 0 passed in C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\AuthController.php on line 54.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-22 12:38:53 --> Too few arguments to function App\Controllers\AuthController::login(), 0 passed in C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\AuthController.php on line 54.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-22 13:45:41 --> Invalid file: "auth/register.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/register.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('auth/register', [], true)
+ 3 APPPATH\Controllers\AuthController.php(56): view('auth/register')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->registerForm()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-22 14:21:31 --> Invalid file: "admin/auth/register.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/auth/register.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/auth/register', [], true)
+ 3 APPPATH\Controllers\DashboardController.php(61): view('admin/auth/register')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DashboardController->registerForm()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-04-22 14:40:31 --> Call to undefined method App\Controllers\AuthController::register()
+in APPPATH\Controllers\AuthController.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->root('register')
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')

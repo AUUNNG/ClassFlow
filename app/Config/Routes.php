@@ -28,17 +28,32 @@ $routes->setAutoRoute(false);
  * --------------------------------------------------------------------
  */
 
-// We get a performance increase by specifying the default
-// route since we don't have to scan directories.
-$routes->get('/login', 'Auth::index', ['filter' => 'noauth']);
-$routes->post('/login', 'Auth::login');
+$routes->get('/', 'IndexController::index');
 
-// Filter on route group for logged in user
-$routes->group('', ['filter'=>'auth'], function ($routes){
-    $routes->get('/logout', 'Auth::logout');
-    $routes->get('/', 'Home::index');
-    $routes->get('/(:any)', 'Home::root/$1');
+$routes->get('/rolecheck', 'RoleController::rolecheck');
+
+$routes->get('logout', 'AuthController::logout');
+
+$routes->get('/login', 'AuthController::loginForm', ['filter' => 'noauth']);
+$routes->post('/login', 'AuthController::login');
+
+$routes->group('student', ['filter' => 'student'], function ($routes) {
+    $routes->get('/', 'StudentController::index');
+    $routes->post('/(:any)', 'StudentController::root/$1');
 });
+
+$routes->group('teacher', ['filter' => 'teacher'], function ($routes) {
+    $routes->get('/', 'TeacherController::index');
+    $routes->post('/(:any)', 'TeacherController::root/$1');
+});
+
+$routes->get('teacher/register', 'TeacherController::registerForm', ['filter' => 'noauth']);
+$routes->post('teacher/register', 'TeacherController::register/$1');
+
+// $routes->group('student', ['filter' => 'student'], function ($routes) {
+//     $routes->get('/', 'StudentController::index');
+//     $routes->post('/(:any)', 'StudentController::root/$1');
+// });
 
 /*
  * --------------------------------------------------------------------

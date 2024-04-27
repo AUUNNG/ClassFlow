@@ -6,7 +6,7 @@ use CodeIgniter\Filters\FilterInterface;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 
-class NoAuth implements FilterInterface
+class Student implements FilterInterface
 {
     /**
      * Do whatever processing this filter needs to do.
@@ -25,8 +25,10 @@ class NoAuth implements FilterInterface
      */
     public function before(RequestInterface $request, $arguments = null)
     {
-        if (session()->get('isLoggedIn')) {
-            return redirect()->to(base_url('/rolecheck'));
+        $session = session();
+        
+        if (!$session->has('role') || $session->get('role') !== 'student') {
+            return redirect()->to('/login');
         }
     }
 

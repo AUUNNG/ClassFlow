@@ -26,6 +26,18 @@
                         <div class="">
                             <form action="" method="post" id="registerForm">
                                 <div class="row g-3">
+                                    <div class="col-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="firstname" name="firstname" value="Yuttapoom">
+                                            <label for="firstname">Firstname</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="lastname" name="lastname" value="Haphanom">
+                                            <label for="lastname">Lastname</label>
+                                        </div>
+                                    </div>
                                     <div class="col-12">
                                         <div class="form-floating">
                                             <input type="text" class="form-control" id="username" name="username" value="admin">
@@ -39,8 +51,14 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="password" class="form-control" id="confirmpass" name="confirmpass" value="12345678">
+                                            <label for="confirmpass">Password</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
                                         <div class="d-grid">
-                                            <button type="button" class="btn btn-primary" onclick="login()">Sign in</button>
+                                            <button type="button" class="btn btn-primary" onclick="register()">Sign up</button>
                                         </div>
                                     </div>
                                 </div>
@@ -68,37 +86,49 @@
     <script>
         jQuery(document).ready(function() {});
 
-        function login() {
+        function register() {
+            var firstname = jQuery('input#firstname').val();
+            var lastname = jQuery('input#lastname').val();
             var username = jQuery('input#username').val();
             var pass = jQuery('input#pass').val();
-            var url = "<?= base_url('login') ?>";
-            // console.log(username, pass, url);
+            var confirmpass = jQuery('input#confirmpass').val();
+            var url = "<?= base_url('teacher/register') ?>";
+            // console.log(firstname, lastname, username, pass, url);
             console.log(url);
             $.ajax({
                 url: url,
                 method: "POST",
                 data: {
+                    'firstname': firstname,
+                    'lastname': lastname,
                     'username': username,
                     'pass': pass,
+                    'confirmpass': confirmpass,
                 },
                 dataType: "json",
                 success: function(response) {
                     console.log(response);
                     if (response.status) {
+                        // let timerInterval;
                         Swal.fire({
                             title: "ดำเนินการสำเร็จ!",
-                            text: response.message,
+                            text: "บันทึกข้อมูลเรียบร้อยแล้ว",
                             icon: "success",
                             timer: 3000,
                             timerProgressBar: true,
                             didOpen: () => {
                                 Swal.showLoading();
+                            },
+                            willClose: () => {
+                                clearInterval(timerInterval);
                             }
                         }).then((result) => {
-                            location.reload();
+                            if (result.dismiss === Swal.DismissReason.timer) {
+                                window.location.href = "<?= base_url('/login') ?>";
+                            }
                         });
                     } else {
-                        Swal.fire("มีปัญหาในการเข้าสู่ระบบ", response.message, "error");
+                        Swal.fire("เกิดข้อผิดพลาด", response.message, "error");
                     }
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
