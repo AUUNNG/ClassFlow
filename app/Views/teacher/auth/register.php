@@ -18,7 +18,7 @@
                         <div class="text-center my-4">
                             <div class="text-center mb-3">
                                 <a href="">
-                                    <img src="" alt="" width="175" height="57">
+                                    <img src="../classflow.svg" alt="" width="175" height="75">
                                 </a>
                             </div>
                             <h2 class="fs-6 fw-normal text-center text-secondary mb-4">Sign up to your account</h2>
@@ -28,31 +28,31 @@
                                 <div class="row g-3">
                                     <div class="col-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="firstname" name="firstname" value="Yuttapoom">
+                                            <input type="text" class="form-control" id="firstname" name="firstname" value="Yuttapoom" placeholder="">
                                             <label for="firstname">Firstname</label>
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="lastname" name="lastname" value="Haphanom">
+                                            <input type="text" class="form-control" id="lastname" name="lastname" value="Haphanom" placeholder="">
                                             <label for="lastname">Lastname</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="username" name="username" value="admin">
+                                            <input type="text" class="form-control" id="username" name="username" value="admin" placeholder="">
                                             <label for="username">Username</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <input type="password" class="form-control" id="pass" name="pass" value="12345678">
+                                            <input type="password" class="form-control" id="pass" name="pass" value="12345678" placeholder="">
                                             <label for="pass">Password</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <input type="password" class="form-control" id="confirmpass" name="confirmpass" value="12345678">
+                                            <input type="password" class="form-control" id="confirmpass" name="confirmpass" value="12345678" placeholder="">
                                             <label for="confirmpass">Password</label>
                                         </div>
                                     </div>
@@ -118,14 +118,9 @@
                             timerProgressBar: true,
                             didOpen: () => {
                                 Swal.showLoading();
-                            },
-                            willClose: () => {
-                                clearInterval(timerInterval);
                             }
-                        }).then((result) => {
-                            if (result.dismiss === Swal.DismissReason.timer) {
-                                window.location.href = "<?= base_url('/login') ?>";
-                            }
+                        }).then(() => {
+                            window.location.href = "<?= base_url('/login') ?>";
                         });
                     } else {
                         Swal.fire("เกิดข้อผิดพลาด", response.message, "error");

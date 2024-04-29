@@ -47,6 +47,11 @@ $routes->group('teacher', ['filter' => 'teacher'], function ($routes) {
     $routes->post('/(:any)', 'TeacherController::root/$1');
 });
 
+$routes->group('teacher/profile', ['filter' => 'teacher'], function ($routes) {
+    $routes->get('/', 'ProfileController::index');
+    $routes->post('/(:any)', 'ProfileController::root/$1');
+});
+
 $routes->get('teacher/register', 'TeacherController::registerForm', ['filter' => 'noauth']);
 $routes->post('teacher/register', 'TeacherController::register/$1');
 

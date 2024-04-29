@@ -94,7 +94,7 @@ class AuthController extends BaseController
                     $session = session();
                     $session->set([
                         'isLoggedIn' => true,
-                        'username' => $result['datas']->user_id,
+                        'user_id' => $result['datas']->user_id,
                         'role' => $result['datas']->role,
                     ]);
                     return json_encode(['status' => true, 'message' => $result['message']]);

@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class AuthModel extends Model
+class ProfileModel extends Model
 {
     ////////////////////////////////start เมธอดหลัก ที่สำคัญต้องมี//////////////////////////////////
     ///สำหรับ การ select เท่านั้นนั้น//////////////
@@ -47,25 +47,8 @@ class AuthModel extends Model
     }
     ////////////////////////////////end เมธอดหลัก ที่สำคัญต้องมี//////////////////////////////////
 
-    public function login($data)
+    function index()
     {
-        $db = \Config\Database::connect();
-        $query = $db->table('users')->where('username', $data['username'])->get()->getRow();
-
-        if ($query) {
-            if (password_verify($data['pass'], $query->pass)) {
-                return ['status' => true, 'message' => 'กำลังเข้าสู่ระบบ', 'datas' => $query];
-            } else {
-                return ['status' => false, 'message' => 'รหัสผ่านไม่ถูกต้อง กรุณาลองอีกครั้ง'];
-            }
-        } else {
-            return ['status' => false, 'message' => 'ไม่พบผู้ใช้ กรุณาตรวจสอบชื่อผู้ใช้ของคุณ'];
-        }
-        // $datas = array(
-        //     'status' => true,
-        //     'status_text' => "model ok",
-        //     'datas' => password_verify($data['pass'], $query->pass),
-        // );
-        // return $datas
+        
     }
 }

@@ -49,7 +49,7 @@ class TeacherController extends BaseController
 
     public function index()
     {
-        echo "test";
+        return view('teacher/index');
     }
 
     public function registerForm()

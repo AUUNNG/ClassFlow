@@ -51,7 +51,7 @@ class TeacherModel extends Model
     {
         try {
             $datetime = date('Y-m-d H:i:s');
-            $data['created_date'] =  $datetime;
+            $data['create_date'] =  $datetime;
 
             // Hash the password
             $data['pass'] = password_hash($data['pass'], PASSWORD_DEFAULT);
