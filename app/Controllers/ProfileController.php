@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\ProfileModel;
 
 class ProfileController extends BaseController
 {
@@ -47,9 +48,26 @@ class ProfileController extends BaseController
     }
     ////////////////////////////////end เมธอดหลัก ที่สำคัญต้องมี//////////////////////////////////
 
-    public function index()
+    function index()
     {
-        
-        return view('profile/index');
+        $id = session()->get('user_id');
+        $ProfileModel = new ProfileModel();
+        $result['datas'] = $ProfileModel->index($id);
+        return view('profile/profile', $result);
+    }
+
+    public function getData($data)
+    {
+        $id = session()->get('user_id');
+        // $ProfileModel = new ProfileModel();
+        // $result = $ProfileModel->editData($id);
+        // $jsonReturn = $this->jsonReturn($result);
+        // return  $jsonReturn;
+        $data = array(
+            'status' => true,
+            'status_text' => "success",
+            'controller' => "true",
+        );
+        echo json_encode($data);
     }
 }

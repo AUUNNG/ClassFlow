@@ -49,7 +49,7 @@ class TeacherController extends BaseController
 
     public function index()
     {
-        return view('teacher/index');
+        return view('teacher/teacher');
     }
 
     public function registerForm()

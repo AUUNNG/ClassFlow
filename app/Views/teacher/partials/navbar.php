@@ -1,7 +1,7 @@
 <nav class="navbar card fixed-top navbar-light d-none d-md-block m-0 p-3">
     <div class="container">
         <a class="navbar-brand d-none d-md-flex" href="/teacher">
-            <img src="classflow.svg" alt="" width="" height="30px">
+            <img src="<?= base_url('classflow.svg') ?>" alt="" width="" height="30px">
         </a>
         <div class="d-flex justify-content-between mx-auto mx-md-0" style="width:500px;">
             <a class="d-flex align-items-center nav-link" href="/teacher">

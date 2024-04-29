@@ -18,7 +18,7 @@
                         <div class="text-center my-4">
                             <div class="text-center mb-3">
                                 <a href="">
-                                    <img src="classflow.svg" alt="" width="175" height="75">
+                                    <img src="<?= base_url('classflow.svg') ?>" alt="" width="175" height="75">
                                 </a>
                             </div>
                             <h2 class="fs-6 fw-normal text-center text-secondary mb-4">Sign up to your account</h2>

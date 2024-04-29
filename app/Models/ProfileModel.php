@@ -47,7 +47,13 @@ class ProfileModel extends Model
     }
     ////////////////////////////////end เมธอดหลัก ที่สำคัญต้องมี//////////////////////////////////
 
-    function index()
+    function index($id)
+    {
+        $db = \Config\Database::connect();
+        return $db->table('users')->where('user_id =', $id)->get()->getResult();
+    }
+
+    function editData()
     {
         
     }
