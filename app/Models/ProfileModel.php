@@ -52,9 +52,21 @@ class ProfileModel extends Model
         $db = \Config\Database::connect();
         return $db->table('users')->where('user_id =', $id)->get()->getResult();
     }
-
-    function editData()
+    
+    function getData($id)
     {
-        
+        $db = \Config\Database::connect();
+        return $db->table('users')
+        ->select('users.*, teachers.teacher_id, teachers.room, teachers.tel')
+        ->join('teachers', 'teachers.user_id = users.user_id', 'left')
+        ->get()
+        ->getResult();
+        // $data = array(
+        //     'status' => true,
+        //     'status_text' => "success",
+        //     'model' => "true",
+        //     'datas' => $id,
+        // );
+        // return $data;
     }
 }

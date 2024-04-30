@@ -92,7 +92,7 @@
             var username = jQuery('input#username').val();
             var pass = jQuery('input#pass').val();
             var confirmpass = jQuery('input#confirmpass').val();
-            var url = "<?= base_url('teacher/register') ?>";
+            var url = "<?= base_url('register/register') ?>";
             // console.log(firstname, lastname, username, pass, url);
             console.log(url);
             $.ajax({

@@ -46,34 +46,4 @@ class TeacherModel extends Model
         }
     }
     ////////////////////////////////end เมธอดหลัก ที่สำคัญต้องมี//////////////////////////////////
-
-    public function register($data)
-    {
-        try {
-            $datetime = date('Y-m-d H:i:s');
-            $data['create_date'] =  $datetime;
-
-            // Hash the password
-            $data['pass'] = password_hash($data['pass'], PASSWORD_DEFAULT);
-            
-            $data['role'] = "teacher";
-
-            $db = \Config\Database::connect();
-            $query = $db->table('users')->insert($data);
-            $returnRow = $this->returnInsert($query);
-            return $returnRow;
-        } catch (\CodeIgniter\Database\Exceptions\DatabaseException $e) {
-            $result  = array(
-                "success" => false,
-                "message" => $e->getMessage(),
-            );
-            return $result;
-        }
-        // $datas = array(
-        //     'status' => true,
-        //     'status_text' => "model ok",
-        //     'datas' => $data,
-        // );
-        // return $datas;
-    }
 }

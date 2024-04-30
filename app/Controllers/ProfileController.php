@@ -56,18 +56,18 @@ class ProfileController extends BaseController
         return view('profile/profile', $result);
     }
 
-    public function getData($data)
+    public function getData()
     {
         $id = session()->get('user_id');
-        // $ProfileModel = new ProfileModel();
-        // $result = $ProfileModel->editData($id);
-        // $jsonReturn = $this->jsonReturn($result);
-        // return  $jsonReturn;
-        $data = array(
-            'status' => true,
-            'status_text' => "success",
-            'controller' => "true",
-        );
-        echo json_encode($data);
+        $ProfileModel = new ProfileModel();
+        $result = $ProfileModel->getData($id);
+        $jsonReturn = $this->jsonReturn($result);
+        return  $jsonReturn;
+        // $data = array(
+        //     'status' => true,
+        //     'status_text' => "success",
+        //     'controller' => "true",
+        // );
+        // echo json_encode($data);
     }
 }

@@ -8,15 +8,15 @@
                 <i class="ri-home-line me-2"></i>
                 <span class="fs-6"> Home </span>
             </a>
-            <a class="d-flex align-items-center nav-link" href="/teacher/profile">
+            <a class="d-flex align-items-center nav-link" href="/profile">
                 <i class="ri-user-line me-2"></i>
                 <span class="fs-6"> Profile </span>
             </a>
-            <a class="d-flex align-items-center nav-link" href="/teacher/subject">
+            <a class="d-flex align-items-center nav-link" href="/subject">
                 <i class="ri-book-2-line me-2"></i>
                 <span class="fs-6"> Subject </span>
             </a>
-            <a class="d-flex align-items-center nav-link" href="/teacher/check">
+            <a class="d-flex align-items-center nav-link" href="/check">
                 <i class="ri-calendar-check-line me-2"></i>
                 <span class="fs-6">Check</span>
             </a>
@@ -34,15 +34,15 @@
                 <i class="ri-home-line"></i>
                 <span class="fs-6"> Home </span>
             </a>
-            <a class="d-flex flex-column align-items-center nav-link" href="/teacher/profile">
+            <a class="d-flex flex-column align-items-center nav-link" href="/profile">
                 <i class="ri-user-line"></i>
                 <span class="fs-6"> Profile </span>
             </a>
-            <a class="d-flex flex-column align-items-center nav-link" href="/teacher/subject">
+            <a class="d-flex flex-column align-items-center nav-link" href="/subject">
                 <i class="ri-book-2-line"></i>
                 <span class="fs-6"> Subject </span>
             </a>
-            <a class="d-flex flex-column align-items-center nav-link" href="/teacher/check">
+            <a class="d-flex flex-column align-items-center nav-link" href="/check">
                 <i class="ri-calendar-check-line"></i>
                 <span class="fs-6">Check</span>
             </a>

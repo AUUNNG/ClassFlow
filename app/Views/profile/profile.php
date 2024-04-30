@@ -92,11 +92,11 @@
             var username = jQuery('input#username').val();
             var tel = jQuery('input#tel').val();
             var room = jQuery('input#room').val();
-            var url = "<?= base_url('teacher/profile/getData') ?>";
+            var url = "<?= base_url('profile/getData') ?>";
             console.log(firstname, lastname, username, tel, room, url);
             $.ajax({
                 url: url,
-                method: "POST",
+                method: "post",
                 data: {
                     'firstname': firstname,
                     'lastname': lastname,
@@ -106,7 +106,7 @@
                 },
                 dataType: "json",
                 success: function(response) {
-                    console.log(response);
+                    console.log(response.data['0']);
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
                     console.error("AJAX Error:", textStatus, errorThrown);

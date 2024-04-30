@@ -23,10 +23,10 @@ $routes->setAutoRoute(false);
 // $routes->setAutoRoute(false);
 
 /*
- * --------------------------------------------------------------------
- * Route Definitions
- * --------------------------------------------------------------------
- */
+* --------------------------------------------------------------------
+* Route Definitions
+* --------------------------------------------------------------------
+*/
 
 $routes->get('/', 'IndexController::index');
 
@@ -37,25 +37,40 @@ $routes->get('logout', 'AuthController::logout');
 $routes->get('/login', 'AuthController::loginForm', ['filter' => 'noauth']);
 $routes->post('/login', 'AuthController::login');
 
+$routes->group('register', ['filter' => 'noauth'], function ($routes) {
+    $routes->get('', 'AuthController::registerForm');
+    $routes->post('(:any)', 'AuthController::root/$1');
+});
+
 $routes->group('student', ['filter' => 'student'], function ($routes) {
     $routes->get('/', 'StudentController::index');
     $routes->post('/(:any)', 'StudentController::root/$1');
 });
 
+// $routes->group('teacher/profile', ['filter' => 'teacher'], function ($routes) {
+//     $routes->get('', 'ProfileController::index');
+//     $routes->post('(:any)', 'ProfileController::root/$1');
+// });
+
+// $routes->get('register', 'TeacherController::registerForm', ['filter' => 'noauth']);
+// $routes->post('register', 'TeacherController::register/$1');
+
 $routes->group('teacher', ['filter' => 'teacher'], function ($routes) {
     $routes->get('', 'TeacherController::index');
     $routes->post('(:any)', 'TeacherController::root/$1');
+    // $routes->get('profile', 'ProfileController::index');
+    // $routes->get('profile/(:any)', 'ProfileController::root/$1');
 });
 
-$routes->group('teacher/profile', ['filter' => 'teacher'], function ($routes) {
+$routes->group('profile', ['filter' => 'teacher'], function ($routes) {
     $routes->get('', 'ProfileController::index');
     $routes->post('(:any)', 'ProfileController::root/$1');
 });
+
+
 // $routes->get('teacher/profile', 'ProfileController::index', ['filter' => 'teacher']);
 // $routes->post('teacher/profile', 'ProfileController::getData');
 
-$routes->get('teacher/register', 'TeacherController::registerForm', ['filter' => 'noauth']);
-$routes->post('teacher/register', 'TeacherController::register/$1');
 
 // $routes->group('student', ['filter' => 'student'], function ($routes) {
 //     $routes->get('/', 'StudentController::index');
