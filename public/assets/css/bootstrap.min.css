@@ -208,6 +208,22 @@ body {
     -webkit-tap-highlight-color: transparent
 }
 
+body::-webkit-scrollbar {
+    display:none;
+}
+
+body::-webkit-scrollbar-track {
+    display:none;
+}
+
+body::-webkit-scrollbar-thumb {
+    display:none;
+}
+
+body::-webkit-scrollbar-button {
+    display:none;
+}
+
 hr {
     margin: 1rem 0;
     color: inherit;

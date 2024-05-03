@@ -1,0 +1,258 @@
+CRITICAL - 2024-05-03 18:43:59 --> Call to a member function num_rows() on array
+in APPPATH\Controllers\SubjectController.php on line 115.
+ 1 APPPATH\Controllers\SubjectController.php(99): App\Controllers\SubjectController->addSubject([...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->root('addSubject')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-03 18:44:20 --> Call to a member function num_rows() on array
+in APPPATH\Controllers\SubjectController.php on line 115.
+ 1 APPPATH\Controllers\SubjectController.php(99): App\Controllers\SubjectController->addSubject([...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->root('addSubject')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-03 18:44:22 --> Call to a member function num_rows() on array
+in APPPATH\Controllers\SubjectController.php on line 115.
+ 1 APPPATH\Controllers\SubjectController.php(99): App\Controllers\SubjectController->addSubject([...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->root('addSubject')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-03 18:44:47 --> Call to a member function num_rows() on array
+in APPPATH\Controllers\SubjectController.php on line 115.
+ 1 APPPATH\Controllers\SubjectController.php(99): App\Controllers\SubjectController->addSubject([...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->root('addSubject')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-03 18:44:50 --> Call to a member function num_rows() on array
+in APPPATH\Controllers\SubjectController.php on line 115.
+ 1 APPPATH\Controllers\SubjectController.php(99): App\Controllers\SubjectController->addSubject([...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->root('addSubject')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-03 18:45:37 --> Call to a member function num_rows() on array
+in APPPATH\Controllers\SubjectController.php on line 115.
+ 1 APPPATH\Controllers\SubjectController.php(99): App\Controllers\SubjectController->addSubject([...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->root('addSubject')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-03 18:49:41 --> Call to a member function getFieldCount() on array
+in APPPATH\Controllers\SubjectController.php on line 115.
+ 1 APPPATH\Controllers\SubjectController.php(99): App\Controllers\SubjectController->addSubject([...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->root('addSubject')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-03 18:49:42 --> Call to a member function getFieldCount() on array
+in APPPATH\Controllers\SubjectController.php on line 115.
+ 1 APPPATH\Controllers\SubjectController.php(99): App\Controllers\SubjectController->addSubject([...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->root('addSubject')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-03 18:49:45 --> Call to a member function getFieldCount() on array
+in APPPATH\Controllers\SubjectController.php on line 115.
+ 1 APPPATH\Controllers\SubjectController.php(99): App\Controllers\SubjectController->addSubject([...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->root('addSubject')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-03 18:50:38 --> Call to a member function getFieldCount() on array
+in APPPATH\Controllers\SubjectController.php on line 115.
+ 1 APPPATH\Controllers\SubjectController.php(99): App\Controllers\SubjectController->addSubject([...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->root('addSubject')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-03 18:50:42 --> Call to a member function getFieldCount() on array
+in APPPATH\Controllers\SubjectController.php on line 115.
+ 1 APPPATH\Controllers\SubjectController.php(99): App\Controllers\SubjectController->addSubject([...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->root('addSubject')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-03 18:50:55 --> Call to a member function getFieldNames() on array
+in APPPATH\Controllers\SubjectController.php on line 115.
+ 1 APPPATH\Controllers\SubjectController.php(99): App\Controllers\SubjectController->addSubject([...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->root('addSubject')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-03 18:52:16 --> Call to a member function getFieldNames() on array
+in APPPATH\Controllers\SubjectController.php on line 115.
+ 1 APPPATH\Controllers\SubjectController.php(99): App\Controllers\SubjectController->addSubject([...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->root('addSubject')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-03 18:53:25 --> Call to a member function getNumRows() on array
+in APPPATH\Controllers\SubjectController.php on line 115.
+ 1 APPPATH\Controllers\SubjectController.php(99): App\Controllers\SubjectController->addSubject([...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->root('addSubject')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-03 18:53:28 --> Call to a member function getNumRows() on array
+in APPPATH\Controllers\SubjectController.php on line 115.
+ 1 APPPATH\Controllers\SubjectController.php(99): App\Controllers\SubjectController->addSubject([...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->root('addSubject')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-05-03 20:54:17 --> mysqli_sql_exception: Duplicate entry 'admin' for key 'username' in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\app\Models\AuthModel.php(85): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\ClassFlow\app\Controllers\AuthController.php(241): App\Models\AuthModel->register(Array)
+#6 C:\xampp\htdocs\ClassFlow\app\Controllers\AuthController.php(84): App\Controllers\AuthController->register(Array)
+#7 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\AuthController->root('register')
+#8 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2024-05-03 21:33:24 --> mysqli_sql_exception: Not unique table/alias: 'users' in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `users`....', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`....')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`....')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\app\Models\AuthModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ClassFlow\app\Controllers\AuthController.php(149): App\Models\AuthModel->login(Array)
+#6 C:\xampp\htdocs\ClassFlow\app\Controllers\AuthController.php(84): App\Controllers\AuthController->login(Array)
+#7 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\AuthController->root('login')
+#8 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-03 21:33:24 --> Not unique table/alias: 'users'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `users`.*, `teachers`.`user_id`
+FROM `users`
+JOIN `users` ON `users`.`user_id` = `teachers`.`user_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.*, `teachers`.`user_id`
+FROM `users`
+JOIN `users` ON `users`.`user_id` = `teachers`.`user_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.*, `teachers`.`user_id`
+FROM `users`
+JOIN `users` ON `users`.`user_id` = `teachers`.`user_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `teachers`.`user_id`
+FROM `users`
+JOIN `users` ON `users`.`user_id` = `teachers`.`user_id`', [], false)
+ 5 APPPATH\Models\AuthModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\AuthController.php(149): App\Models\AuthModel->login([...])
+ 7 APPPATH\Controllers\AuthController.php(84): App\Controllers\AuthController->login([...])
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->root('login')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-05-03 21:42:04 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'OUTER JOIN `teachers` ON `teachers`.`user_id` = `users`.`user_id`
+WHERE `usernam' at line 3 in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `users`....', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`....')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`....')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\app\Models\AuthModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ClassFlow\app\Controllers\AuthController.php(149): App\Models\AuthModel->login(Array)
+#6 C:\xampp\htdocs\ClassFlow\app\Controllers\AuthController.php(84): App\Controllers\AuthController->login(Array)
+#7 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\AuthController->root('login')
+#8 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-03 21:42:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'OUTER JOIN `teachers` ON `teachers`.`user_id` = `users`.`user_id`
+WHERE `usernam' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `users`.*, `teachers`.`user_id`
+FROM `users`
+OUTER JOIN `teachers` ON `teachers`.`user_id` = `users`.`user_id`
+WHERE `username` = \'ADMIN\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.*, `teachers`.`user_id`
+FROM `users`
+OUTER JOIN `teachers` ON `teachers`.`user_id` = `users`.`user_id`
+WHERE `username` = \'ADMIN\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.*, `teachers`.`user_id`
+FROM `users`
+OUTER JOIN `teachers` ON `teachers`.`user_id` = `users`.`user_id`
+WHERE `username` = \'ADMIN\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `teachers`.`user_id`
+FROM `users`
+OUTER JOIN `teachers` ON `teachers`.`user_id` = `users`.`user_id`
+WHERE `username` = :username:', [...], false)
+ 5 APPPATH\Models\AuthModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\AuthController.php(149): App\Models\AuthModel->login([...])
+ 7 APPPATH\Controllers\AuthController.php(84): App\Controllers\AuthController->login([...])
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->root('login')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-05-03 21:42:09 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'OUTER JOIN `teachers` ON `teachers`.`user_id` = `users`.`user_id`
+WHERE `usernam' at line 3 in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `users`....', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`....')
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`....')
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\app\Models\AuthModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ClassFlow\app\Controllers\AuthController.php(149): App\Models\AuthModel->login(Array)
+#6 C:\xampp\htdocs\ClassFlow\app\Controllers\AuthController.php(84): App\Controllers\AuthController->login(Array)
+#7 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\AuthController->root('login')
+#8 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-03 21:42:09 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'OUTER JOIN `teachers` ON `teachers`.`user_id` = `users`.`user_id`
+WHERE `usernam' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `users`.*, `teachers`.`user_id`
+FROM `users`
+OUTER JOIN `teachers` ON `teachers`.`user_id` = `users`.`user_id`
+WHERE `username` = \'AUUNNG\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.*, `teachers`.`user_id`
+FROM `users`
+OUTER JOIN `teachers` ON `teachers`.`user_id` = `users`.`user_id`
+WHERE `username` = \'AUUNNG\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.*, `teachers`.`user_id`
+FROM `users`
+OUTER JOIN `teachers` ON `teachers`.`user_id` = `users`.`user_id`
+WHERE `username` = \'AUUNNG\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `teachers`.`user_id`
+FROM `users`
+OUTER JOIN `teachers` ON `teachers`.`user_id` = `users`.`user_id`
+WHERE `username` = :username:', [...], false)
+ 5 APPPATH\Models\AuthModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\AuthController.php(149): App\Models\AuthModel->login([...])
+ 7 APPPATH\Controllers\AuthController.php(84): App\Controllers\AuthController->login([...])
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->root('login')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')

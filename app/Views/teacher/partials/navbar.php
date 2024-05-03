@@ -3,7 +3,7 @@
         <a class="navbar-brand d-none d-md-flex" href="/teacher">
             <img src="<?= base_url('classflow.svg') ?>" alt="" width="" height="30px">
         </a>
-        <div class="d-flex justify-content-between mx-auto mx-md-0" style="width:500px;">
+        <div class="d-flex justify-content-between mx-auto mx-md-0" style="width:550px;">
             <a class="d-flex align-items-center nav-link" href="/teacher">
                 <i class="ri-home-line me-2"></i>
                 <span class="fs-6"> Home </span>
@@ -20,7 +20,11 @@
                 <i class="ri-calendar-check-line me-2"></i>
                 <span class="fs-6">Check</span>
             </a>
-            <a class="d-flex align-items-center nav-link" onclick="logout()">
+            <a class="d-flex align-items-center nav-link" href="/classroom">
+                <i class="ri-file-user-line me-2"></i>
+                <span class="fs-6">Classroom</span>
+            </a>
+            <a class="d-flex align-items-center nav-link" type="button" onclick="logout()">
                 <i class="ri-logout-box-r-line me-2"></i>
                 <span class="fs-6"> Logout </span>
             </a>
@@ -29,7 +33,7 @@
 </nav>
 <nav class="navbar card fixed-bottom navbar-light d-block d-md-none m-0 p-3">
     <div class="container">
-        <div class="d-flex justify-content-between mx-auto mx-md-0" style="width:350px;">
+        <div class="d-flex justify-content-between mx-auto mx-md-0" style="width:500px;">
             <a class="d-flex flex-column align-items-center nav-link active" href="/teacher">
                 <i class="ri-home-line"></i>
                 <span class="fs-6"> Home </span>
@@ -46,7 +50,11 @@
                 <i class="ri-calendar-check-line"></i>
                 <span class="fs-6">Check</span>
             </a>
-            <a class="d-flex flex-column align-items-center nav-link" onclick="logout()">
+            <a class="d-flex flex-column align-items-center nav-link" href="/classroom">
+                <i class="ri-file-user-line"></i>
+                <span class="fs-6">Classroom</span>
+            </a>
+            <a class="d-flex flex-column align-items-center nav-link" type="button" onclick="logout()">
                 <i class="ri-logout-box-r-line"></i>
                 <span class="fs-6"> Logout </span>
             </a>
@@ -68,7 +76,9 @@
             confirmButtonText: "ออกจากระบบ",
             cancelButtonText: "ยกเลิก",
         }).then((result) => {
-            window.location.href = '<?= base_url('/logout') ?>';
+            if (result.isConfirmed) {
+                window.location.href = '<?= base_url('/logout') ?>';
+            }
         });
     }
 </script>

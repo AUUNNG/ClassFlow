@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\AuthModel;
+use App\Models\TeacherModel;
 
 class AuthController extends BaseController
 {
@@ -84,7 +85,7 @@ class AuthController extends BaseController
 
         return  $result;
     }
-    
+
     ////////////////////////////////end เมธอดหลัก ที่สำคัญต้องมี//////////////////////////////////
 
     public function index()
@@ -118,7 +119,6 @@ class AuthController extends BaseController
                 ]
             ]
         ];
-
         if ($this->request->getMethod() === 'post') {
             if (!$this->validate($rules)) {
                 $errors = $this->validator->getErrors();
@@ -135,6 +135,8 @@ class AuthController extends BaseController
                         'isLoggedIn' => true,
                         'user_id' => $result['datas']->user_id,
                         'role' => $result['datas']->role,
+                        'teacher_id' => $result['datas']->teacher_id,
+                        'room' => $result['datas']->room,
                     ]);
                     return json_encode(['status' => true, 'message' => $result['message']]);
                     // return json_encode(['status' => true, 'message' => $result['message'], 'role' => $result['datas']->role]);
@@ -144,16 +146,6 @@ class AuthController extends BaseController
                 return json_encode(['status' => true, 'message' => 'ok']);
             }
         }
-
-        // $username = $this->request->getPost('username');
-        // $pass = $this->request->getPost('pass');
-        // $request_data = $this->request->getPost();
-        // $AuthModel = new AuthModel();
-        // $result = $AuthModel->login($request_data);
-        // $jsonReturn = $this->jsonReturn($result);
-        // return  $jsonReturn;
-        // header('Content-Type: application/json');
-        // echo json_encode(['status' => true, 'username' => $username, 'pass' => $pass]);
     }
 
     public function registerForm()
@@ -178,6 +170,25 @@ class AuthController extends BaseController
                     'required' => 'กรุณาป้อน {field} ของคุณ'
                 ]
             ],
+            'tel' => [
+                'label' => 'New Phone Number',
+                'rules' => 'required|numeric|min_length[10]|is_unique[users.tel]',
+                'errors' => [
+                    'required' => 'กรุณาป้อน {field} ของคุณ',
+                    "min_length" => "{field} ต้องมีความยาวอย่างน้อย {param} ตัวอักษร",
+                    "numeric" => "กรุณากรอกเฉพาะตัวเลขเท่านั้น",
+                    "is_unique" => "{field} ที่คุณป้อนมีผู้ใช้งานรายอื่นใช้ไปแล้ว"
+                ]
+            ],
+            'room' => [
+                'label' => 'Room Number',
+                'rules' => 'required|numeric',
+                'errors' => [
+                    'required' => 'กรุณาป้อน {field} ของคุณ',
+                    "numeric" => "กรุณากรอกเฉพาะตัวเลขเท่านั้น",
+                    "is_unique" => "{field} ที่คุณป้อนมีผู้ใช้งานรายอื่นใช้ไปแล้ว",
+                ]
+            ],
             'username' => [
                 'label' => 'Username',
                 'rules' => 'required|min_length[5]|is_unique[users.username]',
@@ -195,7 +206,7 @@ class AuthController extends BaseController
                     "min_length" => "{field} ต้องมีความยาวอย่างน้อย {param} ตัวอักษร"
                 ]
             ],
-            'confirmpass' => [
+            'confirmPass' => [
                 'label' => 'Confirm Password',
                 'rules' => 'required|matches[pass]',
                 'errors' => [
@@ -212,28 +223,18 @@ class AuthController extends BaseController
                 return json_encode(['status' => false, 'message' => $errorMessage]);
             } else {
                 $request_data = $this->request->getPost();
-                unset($request_data['confirmpass']);
+                unset($request_data['confirmPass']);
                 $AuthModel = new AuthModel();
-                $result = $AuthModel->register($request_data);
+                $result['AuthModel'] = $AuthModel->register($request_data);
+                if ($result['AuthModel']) {
+                    $request_data['user_id'] = $result['AuthModel'];
+                    $TeacherModel = new TeacherModel();
+                    $result['TeacherModel'] = $TeacherModel->register($request_data);
+                }
                 $jsonReturn = $this->jsonReturn($result);
                 return  $jsonReturn;
             }
         }
-
-        // $request_data = $this->request->getPost();
-        // unset($request_data['confirmpass']);
-        // $AuthModel = new AuthModel();
-        // $result = $AuthModel->register($request_data);
-        // $jsonReturn = $this->jsonReturn($result);
-        // return  $jsonReturn;
-
-        // $datas = array(
-        //     'status' => true,
-        //     'status_text' => "model ok",
-        //     'datas' => $request_data,
-        // );
-        // header('Content-Type: application/json');
-        // echo json_encode($datas);
     }
 
     public function logout()

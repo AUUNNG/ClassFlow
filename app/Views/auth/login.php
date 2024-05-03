@@ -24,11 +24,11 @@
                             <h2 class="fs-6 fw-normal text-center text-secondary mb-4">Sign up to your account</h2>
                         </div>
                         <div class="">
-                            <form action="" method="post" id="registerForm">
+                            <form action="" method="post" id="loginForm">
                                 <div class="row g-3">
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="username" name="username" value="admin" placeholder="">
+                                            <input type="text" class="form-control" id="username" name="username" value="AUUNNG" placeholder="">
                                             <label for="username">Username</label>
                                         </div>
                                     </div>
@@ -68,20 +68,24 @@
     <script>
         jQuery(document).ready(function() {});
 
+        jQuery(function() {
+            jQuery('input#username').keyup(function() {
+                this.value = this.value.toLocaleUpperCase();
+            });
+        });
+
         function login() {
-            var username = jQuery('input#username').val();
-            var pass = jQuery('input#pass').val();
-            var url = "<?= base_url('login') ?>";
+            var fd = new FormData(jQuery('form#loginForm')[0]);
+            var url = "<?= base_url('login/login') ?>";
             // console.log(username, pass, url);
-            console.log(url);
+            console.log(fd);
             $.ajax({
                 url: url,
                 method: "POST",
-                data: {
-                    'username': username,
-                    'pass': pass,
-                },
+                data: fd,
                 dataType: "json",
+                processData: false,
+                contentType: false,
                 success: function(response) {
                     console.log(response);
                     if (response.status) {
@@ -89,7 +93,7 @@
                             title: "ดำเนินการสำเร็จ!",
                             text: response.message,
                             icon: "success",
-                            timer: 3000,
+                            timer: 1000,
                             timerProgressBar: true,
                             didOpen: () => {
                                 Swal.showLoading();

@@ -50,8 +50,12 @@ class AuthModel extends Model
     public function login($data)
     {
         $db = \Config\Database::connect();
-        $query = $db->table('users')->where('username', $data['username'])->get()->getRow();
-
+        $query = $db->table('users')
+        ->select('users.*,teachers.*')
+        ->join('teachers', 'teachers.user_id = users.user_id', 'left')
+        ->where('username', $data['username'])
+        ->get()
+        ->getRow();
         if ($query) {
             if (password_verify($data['pass'], $query->pass)) {
                 return ['status' => true, 'message' => 'กำลังเข้าสู่ระบบ', 'datas' => $query];
@@ -61,25 +65,18 @@ class AuthModel extends Model
         } else {
             return ['status' => false, 'message' => 'ไม่พบผู้ใช้ กรุณาตรวจสอบชื่อผู้ใช้ของคุณ'];
         }
-        // $datas = array(
-        //     'status' => true,
-        //     'status_text' => "model ok",
-        //     'datas' => password_verify($data['pass'], $query->pass),
-        // );
-        // return $datas
     }
     
     public function register($data)
     {
+        unset($data['room']);
         try {
             $datetime = date('Y-m-d H:i:s');
             $data['create_date'] =  $datetime;
-
-            // Hash the password
-            $data['pass'] = password_hash($data['pass'], PASSWORD_DEFAULT);
             
+            $data['pass'] = password_hash($data['pass'], PASSWORD_DEFAULT);
             $data['role'] = "teacher";
-
+            
             $db = \Config\Database::connect();
             $query = $db->table('users')->insert($data);
             $returnRow = $this->returnInsert($query);
@@ -93,7 +90,7 @@ class AuthModel extends Model
         }
         // $datas = array(
         //     'status' => true,
-        //     'status_text' => "model ok",
+        //     'status_text' => "model authmodel ok",
         //     'datas' => $data,
         // );
         // return $datas;

@@ -23,47 +23,57 @@
                             </div>
                             <h2 class="fs-6 fw-normal text-center text-secondary mb-4">Sign up to your account</h2>
                         </div>
-                        <div class="">
-                            <form action="" method="post" id="registerForm">
-                                <div class="row g-3">
-                                    <div class="col-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="firstname" name="firstname" value="Yuttapoom" placeholder="">
-                                            <label for="firstname">Firstname</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="lastname" name="lastname" value="Haphanom" placeholder="">
-                                            <label for="lastname">Lastname</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="username" name="username" value="admin" placeholder="">
-                                            <label for="username">Username</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <input type="password" class="form-control" id="pass" name="pass" value="12345678" placeholder="">
-                                            <label for="pass">Password</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <input type="password" class="form-control" id="confirmpass" name="confirmpass" value="12345678" placeholder="">
-                                            <label for="confirmpass">Password</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="d-grid">
-                                            <button type="button" class="btn btn-primary" onclick="register()">Sign up</button>
-                                        </div>
+                        <form action="" method="post" id="registerForm">
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="firstname" name="firstname" value="Yuttapoom" placeholder="">
+                                        <label for="firstname">Firstname</label>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
+                                <div class="col-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="lastname" name="lastname" value="Haphanom" placeholder="">
+                                        <label for="lastname">Lastname</label>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-floating">
+                                        <input type="tel" class="form-control" id="tel" name="tel" value="0999999999" placeholder="">
+                                        <label for="tel">Phone Number</label>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-floating">
+                                        <input type="room" class="form-control" id="room" name="room" value="00" placeholder="">
+                                        <label for="room">Room</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="username" name="username" value="AUUNNG" placeholder="">
+                                        <label for="username">Username</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="password" class="form-control" id="pass" name="pass" value="12345678" placeholder="">
+                                        <label for="pass">Password</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="password" class="form-control" id="confirmPass" name="confirmPass" value="12345678" placeholder="">
+                                        <label for="confirmPass">Password</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-primary" onclick="register()">Sign up</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -85,31 +95,34 @@
 
     <script>
         jQuery(document).ready(function() {});
+        
+        jQuery(function() {
+            jQuery('input#username').keyup(function() {
+                this.value = this.value.toLocaleUpperCase();
+            });
+            jQuery('input#firstname, input#lastname').keyup(function(event) {
+                var textBox = event.target;
+                var start = textBox.selectionStart;
+                var end = textBox.selectionEnd;
+                textBox.value = textBox.value.charAt(0).toUpperCase() + textBox.value.slice(1);
+                textBox.setSelectionRange(start, end);
+            });
+        });
 
         function register() {
-            var firstname = jQuery('input#firstname').val();
-            var lastname = jQuery('input#lastname').val();
-            var username = jQuery('input#username').val();
-            var pass = jQuery('input#pass').val();
-            var confirmpass = jQuery('input#confirmpass').val();
+            var fd = new FormData(jQuery('form#registerForm')[0]);
             var url = "<?= base_url('register/register') ?>";
-            // console.log(firstname, lastname, username, pass, url);
             console.log(url);
             $.ajax({
                 url: url,
                 method: "POST",
-                data: {
-                    'firstname': firstname,
-                    'lastname': lastname,
-                    'username': username,
-                    'pass': pass,
-                    'confirmpass': confirmpass,
-                },
+                data: fd,
                 dataType: "json",
+                processData: false,
+                contentType: false,
                 success: function(response) {
                     console.log(response);
                     if (response.status) {
-                        // let timerInterval;
                         Swal.fire({
                             title: "ดำเนินการสำเร็จ!",
                             text: "บันทึกข้อมูลเรียบร้อยแล้ว",

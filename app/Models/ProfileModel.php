@@ -47,26 +47,39 @@ class ProfileModel extends Model
     }
     ////////////////////////////////end เมธอดหลัก ที่สำคัญต้องมี//////////////////////////////////
 
-    function index($id)
+    function getDataById()
     {
-        $db = \Config\Database::connect();
-        return $db->table('users')->where('user_id =', $id)->get()->getResult();
-    }
-    
-    function getData($id)
-    {
+        $user_id =  session()->get('user_id');
         $db = \Config\Database::connect();
         return $db->table('users')
-        ->select('users.*, teachers.teacher_id, teachers.room, teachers.tel')
-        ->join('teachers', 'teachers.user_id = users.user_id', 'left')
-        ->get()
-        ->getResult();
-        // $data = array(
-        //     'status' => true,
-        //     'status_text' => "success",
-        //     'model' => "true",
-        //     'datas' => $id,
-        // );
-        // return $data;
+            ->where('users.user_id', $user_id)
+            ->get()
+            ->getResult();
+    }
+
+    function updateGeneral($data)
+    {
+        // $data['user_id'] =  session()->get('user_id');
+        $user_id =  session()->get('user_id');
+        $data['user_update'] =  $user_id;
+        $update_date = date('Y-m-d H:i:s');
+        $data['update_date'] =  $update_date;
+        $db = \Config\Database::connect();
+        return $db->table('users')
+            ->where('users.user_id', $user_id)
+            ->update($data);
+    }
+
+    function updateTel($data)
+    {
+        // $data['user_id'] =  session()->get('user_id');
+        $user_id =  session()->get('user_id');
+        $data['user_update'] =  $user_id;
+        $update_date = date('Y-m-d H:i:s');
+        $data['update_date'] =  $update_date;
+        $db = \Config\Database::connect();
+        return $db->table('users')
+            ->where('users.user_id', $user_id)
+            ->update($data);
     }
 }
