@@ -32,6 +32,13 @@
                         <hr class="m-0">
                     </li>
                     <li class="nav-item fs-5">
+                        <a href="<?= base_url('profile/room') ?>" class="nav-link d-flex justify-content-between p-4">
+                            <span>Change Room</span>
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                        <hr class="m-0">
+                    </li>
+                    <li class="nav-item fs-5">
                         <a href="<?= base_url('profile/tel') ?>" class="nav-link d-flex justify-content-between p-4">
                             <span>Change Phone Number</span>
                             <i class="ri-arrow-right-line"></i>

@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\ProfileModel;
+use App\Models\TeacherModel;
 
 class ProfileController extends BaseController
 {
@@ -129,8 +130,14 @@ class ProfileController extends BaseController
     function general()
     {
         $ProfileModel = new ProfileModel();
-        $result['datas'] = $ProfileModel->getDataById();
+        $result['datas'] = $ProfileModel->general();
         return view('profile/general', $result);
+        echo json_encode($result);
+    }
+
+    function room()
+    {
+        return view('profile/room');
     }
 
     function tel()
@@ -173,6 +180,7 @@ class ProfileController extends BaseController
                     "is_unique" => "{field} ที่คุณป้อนมีผู้ใช้งานรายอื่นใช้ไปแล้ว"
                 ]
             ],
+
         ];
 
         if ($this->request->getMethod() === 'post') {
@@ -203,6 +211,50 @@ class ProfileController extends BaseController
         //     'controller' => "true",
         // );
         // echo json_encode($data);
+    }
+
+    public function updateRoom()
+    {
+        $TeacherModel = new TeacherModel();
+        $result['oldData'] = $TeacherModel->getDataByUserId();
+        $request_data = $this->request->getPost();
+        // echo json_encode($result['oldData'][0]->room);
+        $rules = [
+            'room' => [
+                'label' => 'Room Number',
+                'rules' => 'required|numeric',
+                'errors' => [
+                    'required' => 'กรุณาป้อน {field} ของคุณ',
+                    "numeric" => "กรุณากรอกเฉพาะตัวเลขเท่านั้น",
+                    "is_unique" => "{field} ที่คุณป้อนมีผู้ใช้งานรายอื่นใช้ไปแล้ว",
+                ]
+            ],
+        ];
+
+        if ($this->request->getMethod() === 'post') {
+            if (
+                $request_data['room'] === $result['oldData'][0]->room
+            ) {
+                $data = array(
+                    'status' => true,
+                );
+                echo json_encode($data);
+            } else {
+                if ($request_data['room'] == "0") {
+                    return json_encode(['status' => false, 'message' => "กรุณากรอกค่า Room Number"]);
+                } else {
+                    if (!$this->validate($rules)) {
+                        $errors = $this->validator->getErrors();
+                        $errorMessage = implode("<br>", $errors);
+                        return json_encode(['status' => false, 'message' => $errorMessage]);
+                    } else {
+                        $result = $TeacherModel->updateRoom($request_data);
+                        $jsonReturn = $this->jsonReturn2($result);
+                        return  $jsonReturn;
+                    }
+                }
+            }
+        }
     }
 
     public function updateTel()

@@ -47,6 +47,16 @@ class ProfileModel extends Model
     }
     ////////////////////////////////end เมธอดหลัก ที่สำคัญต้องมี//////////////////////////////////
 
+    function general()
+    {
+        $user_id =  session()->get('user_id');
+        $db = \Config\Database::connect();
+        return $db->table('users')
+            ->where('users.user_id', $user_id)
+            ->get()
+            ->getResult();
+    }
+
     function getDataById()
     {
         $user_id =  session()->get('user_id');
@@ -59,7 +69,7 @@ class ProfileModel extends Model
 
     function updateGeneral($data)
     {
-        // $data['user_id'] =  session()->get('user_id');
+        unset($data['room']);
         $user_id =  session()->get('user_id');
         $data['user_update'] =  $user_id;
         $update_date = date('Y-m-d H:i:s');

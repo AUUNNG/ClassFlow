@@ -89,13 +89,29 @@ class TeacherModel extends Model
         // return $datas;
     }
 
-    function updateTeacher()
+    function updateGeneral($data)
     {
+        unset($data['firstname']);
+        unset($data['lastname']);
+        unset($data['username']);
         $user_id =  session()->get('user_id');
+        $data['user_update'] =  $user_id;
+        $update_date = date('Y-m-d H:i:s');
+        $data['update_date'] =  $update_date;
         $db = \Config\Database::connect();
         return $db->table('teachers')
             ->where('teachers.user_id', $user_id)
-            ->get()
-            ->getNumRows();
+            ->update($data);
+    }
+    function updateRoom($data)
+    {
+        $user_id =  session()->get('user_id');
+        $data['user_update'] =  $user_id;
+        $update_date = date('Y-m-d H:i:s');
+        $data['update_date'] =  $update_date;
+        $db = \Config\Database::connect();
+        return $db->table('teachers')
+            ->where('teachers.user_id', $user_id)
+            ->update($data);
     }
 }
