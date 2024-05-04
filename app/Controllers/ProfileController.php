@@ -240,7 +240,7 @@ class ProfileController extends BaseController
                 );
                 echo json_encode($data);
             } else {
-                if ($request_data['room'] == "0") {
+                if ($request_data['room'] == 0) {
                     return json_encode(['status' => false, 'message' => "กรุณากรอกค่า Room Number"]);
                 } else {
                     if (!$this->validate($rules)) {
@@ -248,9 +248,16 @@ class ProfileController extends BaseController
                         $errorMessage = implode("<br>", $errors);
                         return json_encode(['status' => false, 'message' => $errorMessage]);
                     } else {
-                        $result = $TeacherModel->updateRoom($request_data);
-                        $jsonReturn = $this->jsonReturn2($result);
-                        return  $jsonReturn;
+                        $result['updateRoom'] = $TeacherModel->updateRoom($request_data);
+                        $result['getDataByUserId'] = $TeacherModel->getDataByUserId();
+                        if ($result) {
+                            $session = session();
+                            $session->set([
+                                'room' => $result['getDataByUserId']['0']->room,
+                            ]);
+                            $jsonReturn = $this->jsonReturn2($result['updateRoom']);
+                            return $jsonReturn;
+                        }
                     }
                 }
             }

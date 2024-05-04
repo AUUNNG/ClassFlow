@@ -110,8 +110,9 @@ class TeacherModel extends Model
         $update_date = date('Y-m-d H:i:s');
         $data['update_date'] =  $update_date;
         $db = \Config\Database::connect();
-        return $db->table('teachers')
+        $query = $db->table('teachers')
             ->where('teachers.user_id', $user_id)
             ->update($data);
+        return $query;
     }
 }

@@ -700,3 +700,66 @@ in SYSTEMPATH\Database\BaseConnection.php on line 883.
  7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-04 14:19:37 --> Cannot use a scalar value as an array
+in APPPATH\Controllers\ProfileController.php on line 252.
+ 1 APPPATH\Controllers\ProfileController.php(252): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot use a scalar value as an array', 'C:\\xampp\\htdocs\\ClassFlow\\app\\Controllers\\ProfileController.php', 252, [...])
+ 2 APPPATH\Controllers\ProfileController.php(119): App\Controllers\ProfileController->updateRoom([...])
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ProfileController->root('updateRoom')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-04 14:19:52 --> Cannot use a scalar value as an array
+in APPPATH\Controllers\ProfileController.php on line 252.
+ 1 APPPATH\Controllers\ProfileController.php(252): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot use a scalar value as an array', 'C:\\xampp\\htdocs\\ClassFlow\\app\\Controllers\\ProfileController.php', 252, [...])
+ 2 APPPATH\Controllers\ProfileController.php(119): App\Controllers\ProfileController->updateRoom([...])
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ProfileController->root('updateRoom')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-04 14:20:25 --> Cannot use a scalar value as an array
+in APPPATH\Controllers\ProfileController.php on line 252.
+ 1 APPPATH\Controllers\ProfileController.php(252): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot use a scalar value as an array', 'C:\\xampp\\htdocs\\ClassFlow\\app\\Controllers\\ProfileController.php', 252, [...])
+ 2 APPPATH\Controllers\ProfileController.php(119): App\Controllers\ProfileController->updateRoom([...])
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ProfileController->root('updateRoom')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-04 14:20:49 --> Cannot use a scalar value as an array
+in APPPATH\Controllers\ProfileController.php on line 252.
+ 1 APPPATH\Controllers\ProfileController.php(252): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot use a scalar value as an array', 'C:\\xampp\\htdocs\\ClassFlow\\app\\Controllers\\ProfileController.php', 252, [...])
+ 2 APPPATH\Controllers\ProfileController.php(119): App\Controllers\ProfileController->updateRoom([...])
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ProfileController->root('updateRoom')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-04 14:21:07 --> Cannot use a scalar value as an array
+in APPPATH\Controllers\ProfileController.php on line 252.
+ 1 APPPATH\Controllers\ProfileController.php(252): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot use a scalar value as an array', 'C:\\xampp\\htdocs\\ClassFlow\\app\\Controllers\\ProfileController.php', 252, [...])
+ 2 APPPATH\Controllers\ProfileController.php(119): App\Controllers\ProfileController->updateRoom([...])
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ProfileController->root('updateRoom')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-04 14:21:59 --> Cannot use a scalar value as an array
+in APPPATH\Controllers\ProfileController.php on line 252.
+ 1 APPPATH\Controllers\ProfileController.php(252): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot use a scalar value as an array', 'C:\\xampp\\htdocs\\ClassFlow\\app\\Controllers\\ProfileController.php', 252, [...])
+ 2 APPPATH\Controllers\ProfileController.php(119): App\Controllers\ProfileController->updateRoom([...])
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ProfileController->root('updateRoom')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-04 14:22:17 --> Cannot use a scalar value as an array
+in APPPATH\Controllers\ProfileController.php on line 252.
+ 1 APPPATH\Controllers\ProfileController.php(252): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot use a scalar value as an array', 'C:\\xampp\\htdocs\\ClassFlow\\app\\Controllers\\ProfileController.php', 252, [...])
+ 2 APPPATH\Controllers\ProfileController.php(119): App\Controllers\ProfileController->updateRoom([...])
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ProfileController->root('updateRoom')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
