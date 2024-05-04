@@ -4,7 +4,6 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\SubjectModel;
-use App\Models\TeacherModel;
 
 class SubjectController extends BaseController
 {
@@ -105,15 +104,27 @@ class SubjectController extends BaseController
 
     public function index()
     {
-        return view('subject/subject');
+        $SubjectModel = new SubjectModel();
+        $result['datas'] = $SubjectModel->index();
+        return view('subject/subject', $result);
+    }
+
+    public function test()
+    {
+        $SubjectModel = new SubjectModel();
+        $result['datas'] = $SubjectModel->index();
+        return json_encode($result);
     }
 
     public function addSubject()
     {
-        $TeacherModel = new TeacherModel();
-        $result['teachers'] = $TeacherModel->getRowByUserId();
         $request_data = $this->request->getPost();
-        echo json_encode($result['teachers']);
+        $SubjectModel = new SubjectModel();
+        $result['addSubject'] = $SubjectModel->addSubject($request_data);
+        $request_data['subject_id'] = $result['addSubject'];
+        $result['addSubjectAccess'] = $SubjectModel->addSubjectAccess($request_data);
+        // $jsonReturn = $this->jsonReturn($result);
+        return json_encode($result);
     }
 
     public function register()
@@ -180,7 +191,7 @@ class SubjectController extends BaseController
                 $SubjectModel = new SubjectModel();
                 $result = $SubjectModel->register($request_data);
                 $jsonReturn = $this->jsonReturn($result);
-                return  $jsonReturn;
+                return $jsonReturn;
             }
         }
 

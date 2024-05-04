@@ -46,7 +46,20 @@ class SubjectModel extends Model
         }
     }
     ////////////////////////////////end เมธอดหลัก ที่สำคัญต้องมี//////////////////////////////////
-    
+
+    function index()
+    {
+        $teacher_id =  session()->get('teacher_id');
+        $db = \Config\Database::connect();
+        $query = $db->table('subjects')
+        ->select('subjects.subject_code, subjects.subject_name, users.firstname, users.lastname')
+        ->join('subjects_access', 'subjects.subject_id = subjects_access.subject_id')
+        ->join('users', 'subjects.user_update = users.user_id')
+        ->where('subjects_access.teacher_id', $teacher_id)
+        ->get();
+        return $query->getResult();
+    }
+
     function getDataById()
     {
         $user_id =  session()->get('user_id');
@@ -56,7 +69,7 @@ class SubjectModel extends Model
             ->get()
             ->getResult();
     }
-    
+
     function getRowById()
     {
         $user_id =  session()->get('user_id');
@@ -65,5 +78,29 @@ class SubjectModel extends Model
             ->where('teachers.user_id', $user_id)
             ->get()
             ->getNumRows();
+    }
+
+    function addSubject($data)
+    {
+        $data['user_update'] = session()->get('user_id');
+        $datetime = date('Y-m-d H:i:s');
+        $data['create_date'] =  $datetime;
+        $db = \Config\Database::connect();
+        $db->table('subjects')
+            ->insert($data);
+        return $db->insertID();
+    }
+
+    function addSubjectAccess($data)
+    {
+        unset($data['subject_code']);
+        unset($data['subject_name']);
+        $data['user_update'] = session()->get('user_id');
+        $data['teacher_id'] = session()->get('teacher_id');
+        $datetime = date('Y-m-d H:i:s');
+        $data['create_date'] =  $datetime;
+        $db = \Config\Database::connect();
+        return $db->table('subjects_access')
+            ->insert($data);
     }
 }

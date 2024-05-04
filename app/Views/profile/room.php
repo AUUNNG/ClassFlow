@@ -75,16 +75,6 @@
     <script>
         jQuery(document).ready(function() {});
 
-        jQuery(function() {
-            jQuery('input#room').keyup(function(event) {
-                var inputValue = jQuery(this).val();
-
-                if (/^0[1-9]/.test(inputValue)) {
-                    jQuery(this).val(inputValue.replace(/^0/, ''));
-                }
-            });
-        });
-
         function updateRoom() {
             var fd = new FormData(jQuery('form#roomForm')[0]);
             var url = "<?= base_url('profile/updateRoom') ?>";

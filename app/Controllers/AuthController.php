@@ -155,6 +155,9 @@ class AuthController extends BaseController
 
     public function register()
     {
+        $request_data = $this->request->getPost();
+        $request_data['room'] = intval($request_data['room']);
+
         $rules = [
             'firstname' => [
                 'label' => 'First Name',
@@ -217,22 +220,25 @@ class AuthController extends BaseController
         ];
 
         if ($this->request->getMethod() === 'post') {
-            if (!$this->validate($rules)) {
-                $errors = $this->validator->getErrors();
-                $errorMessage = implode("<br>", $errors);
-                return json_encode(['status' => false, 'message' => $errorMessage]);
+            if ($request_data['room'] == 0) {
+                return json_encode(['status' => false, 'message' => "กรุณากรอกค่า Room Number"]);
             } else {
-                $request_data = $this->request->getPost();
-                unset($request_data['confirmPass']);
-                $AuthModel = new AuthModel();
-                $result['AuthModel'] = $AuthModel->register($request_data);
-                if ($result['AuthModel']) {
+                if (!$this->validate($rules)) {
+                    $errors = $this->validator->getErrors();
+                    $errorMessage = implode("<br>", $errors);
+                    return json_encode(['status' => false, 'message' => $errorMessage]);
+                } else {
+                    unset($request_data['confirmPass']);
+                    $AuthModel = new AuthModel();
+                    $result['AuthModel'] = $AuthModel->register($request_data);
+
                     $request_data['user_id'] = $result['AuthModel'];
                     $TeacherModel = new TeacherModel();
                     $result['TeacherModel'] = $TeacherModel->register($request_data);
+
+                    $jsonReturn = $this->jsonReturn($result);
+                    return $jsonReturn;
                 }
-                $jsonReturn = $this->jsonReturn($result);
-                return  $jsonReturn;
             }
         }
     }

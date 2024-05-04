@@ -45,7 +45,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="form-floating">
-                                        <input type="room" class="form-control" id="room" name="room" value="00" placeholder="">
+                                        <input type="room" class="form-control" id="room" name="room" value="3" placeholder="">
                                         <label for="room">Room</label>
                                     </div>
                                 </div>
@@ -95,7 +95,7 @@
 
     <script>
         jQuery(document).ready(function() {});
-        
+
         jQuery(function() {
             jQuery('input#username').keyup(function() {
                 this.value = this.value.toLocaleUpperCase();

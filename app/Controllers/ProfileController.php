@@ -166,7 +166,7 @@ class ProfileController extends BaseController
             ],
             'lastname' => [
                 'label' => 'Last Name',
-                'rules' => 'required|numeric',
+                'rules' => 'required',
                 'errors' => [
                     'required' => 'กรุณาป้อน {field} ของคุณ'
                 ]
@@ -218,6 +218,7 @@ class ProfileController extends BaseController
         $TeacherModel = new TeacherModel();
         $result['oldData'] = $TeacherModel->getDataByUserId();
         $request_data = $this->request->getPost();
+        $request_data['room'] = intval($request_data['room']);
         // echo json_encode($result['oldData'][0]->room);
         $rules = [
             'room' => [
