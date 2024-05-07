@@ -79,9 +79,6 @@
     <!--Swiper slider js-->
     <script src="/assets/libs/swiper/swiper-bundle.min.js"></script>
 
-    <!--Swiper slider js-->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
     <!-- Dashboard init -->
     <script src="/assets/js/pages/dashboard-ecommerce.init.js"></script>
 

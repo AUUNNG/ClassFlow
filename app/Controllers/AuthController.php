@@ -135,7 +135,6 @@ class AuthController extends BaseController
                         'isLoggedIn' => true,
                         'user_id' => $result['datas']->user_id,
                         'role' => $result['datas']->role,
-                        'teacher_id' => $result['datas']->teacher_id,
                         'room' => $result['datas']->room,
                     ]);
                     return json_encode(['status' => true, 'message' => $result['message'], 'datas' => $result['datas']]);

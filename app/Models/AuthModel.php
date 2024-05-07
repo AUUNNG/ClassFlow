@@ -51,7 +51,7 @@ class AuthModel extends Model
     {
         $db = \Config\Database::connect();
         $query = $db->table('users')
-        ->select('users.*,teachers.*')
+        ->select('users.*,teachers.room')
         ->join('teachers', 'teachers.user_id = users.user_id', 'left')
         ->where('username', $data['username'])
         ->get()

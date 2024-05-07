@@ -13,5 +13,6 @@ class IndexController extends BaseController
         echo session()->get('role') . "<br>";
         echo session()->get('teacher_id') . "<br>";
         echo session()->get('room') . "<br>";
+        return view('index');
     }
 }

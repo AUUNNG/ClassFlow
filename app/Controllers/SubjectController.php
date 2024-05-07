@@ -105,15 +105,16 @@ class SubjectController extends BaseController
     public function index()
     {
         $SubjectModel = new SubjectModel();
-        $result['datas'] = $SubjectModel->index();
+        $result['subjects'] = $SubjectModel->index();
         return view('subject/subject', $result);
     }
 
-    public function test()
+    public function test($id)
     {
         $SubjectModel = new SubjectModel();
-        $result['datas'] = $SubjectModel->index();
-        return json_encode($result);
+        $result['datas'] = $SubjectModel->test($id);
+        $jsonReturn = $this->jsonReturn($result);
+        return  $jsonReturn;
     }
 
     public function addSubject()
@@ -125,6 +126,37 @@ class SubjectController extends BaseController
         $result['addSubjectAccess'] = $SubjectModel->addSubjectAccess($request_data);
         // $jsonReturn = $this->jsonReturn($result);
         return json_encode($result);
+    }
+
+    public function updateSubjectForm($id)
+    {
+        $SubjectModel = new SubjectModel();
+        $result = $SubjectModel->updateSubjectForm($id);
+        $jsonReturn = $this->jsonReturn($result);
+        return  $jsonReturn;
+    }
+
+    public function updateSubject()
+    {
+        $request_data = $this->request->getPost();
+        $SubjectModel = new SubjectModel();
+        $result = $SubjectModel->updateSubject($request_data);
+        $jsonReturn = $this->jsonReturn($result);
+        return  $jsonReturn;
+    }
+
+    public function updateSubjectAccessForm($id)
+    {
+        $SubjectModel = new SubjectModel();
+        $result = $SubjectModel->updateSubjectAccessForm($id);
+        $jsonReturn = $this->jsonReturn($result);
+        return  $jsonReturn;
+    }
+
+    public function updateSubjectAccess()
+    {
+        $request_data = $this->request->getPost();
+        return json_encode($request_data);
     }
 
     public function register()

@@ -49,15 +49,26 @@ class SubjectModel extends Model
 
     function index()
     {
-        $teacher_id =  session()->get('teacher_id');
+        $user_id =  session()->get('user_id');
         $db = \Config\Database::connect();
         $query = $db->table('subjects')
-        ->select('subjects.subject_code, subjects.subject_name, users.firstname, users.lastname')
-        ->join('subjects_access', 'subjects.subject_id = subjects_access.subject_id')
-        ->join('users', 'subjects.user_update = users.user_id')
-        ->where('subjects_access.teacher_id', $teacher_id)
-        ->get();
+            ->select('subjects.subject_id, subjects.subject_code, subjects.subject_name')
+            ->join('subjects_access', 'subjects.subject_id = subjects_access.subject_id')
+            ->where('subjects_access.user_id', $user_id)
+            ->get();
         return $query->getResult();
+    }
+
+    function test($id)
+    {
+        $db = \Config\Database::connect();
+        $query = $db->table('subjects')
+            ->select('subjects.*, users.firstname, users.lastname')
+            ->join('users', 'subjects.user_update = users.user_id')
+            ->where('subject_id', $id)
+            ->get();
+        $returnRow = $this->returnList($query);
+        return $returnRow;
     }
 
     function getDataById()
@@ -80,6 +91,29 @@ class SubjectModel extends Model
             ->getNumRows();
     }
 
+    function updateSubjectForm($id)
+    {
+        $db = \Config\Database::connect();
+        $query = $db->table('subjects')
+            ->select('subjects.*, users.firstname, users.lastname')
+            ->join('users', 'subjects.user_update = users.user_id')
+            ->where('subject_id', $id)
+            ->get();
+        $returnRow = $this->returnList($query);
+        return $returnRow;
+    }
+
+    function updateSubject($data)
+    {
+        $data['user_update'] = session()->get('user_id');
+        $datetime = date('Y-m-d H:i:s');
+        $data['update_date'] =  $datetime;
+        $db = \Config\Database::connect();
+        $query = $db->table('subjects')->where('subjects.subject_id', $data['subject_id'])->update($data);
+        $returnRow = $this->returnEdit($query);
+        return $returnRow;
+    }
+
     function addSubject($data)
     {
         $data['user_update'] = session()->get('user_id');
@@ -91,8 +125,24 @@ class SubjectModel extends Model
         return $db->insertID();
     }
 
-    function addSubjectAccess($data)
+    function updateSubjectAccessForm($id)
     {
+        $db = \Config\Database::connect();
+        $query = $db->table('subjects_access')
+            ->select('subjects_access.*, users.firstname, users.lastname')
+            ->join('users', 'subjects_access.user_id = users.user_id')
+            ->where('subjects_access.subject_id', $id) // ใส่เงื่อนไข subject_id จาก subjects_access
+            ->where('users.role', 'teacher') // เลือกเฉพาะครู (role teacher)
+            ->get();
+
+        $returnRow = $this->returnList($query);
+        return $returnRow;
+    }
+    
+    function addSubjectAccess($datas)
+    {
+        foreach ($datas as $data) {
+        }
         unset($data['subject_code']);
         unset($data['subject_name']);
         $data['user_update'] = session()->get('user_id');

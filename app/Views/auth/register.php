@@ -88,8 +88,6 @@
     <script src="/assets/js/pages/particles.app.js"></script>
     <!-- password-addon init -->
     <script src="/assets/js/pages/password-addon.init.js"></script>
-    <!-- sweetalert2 -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
