@@ -80,11 +80,10 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-text">Access</div>
-                                <select class="form-control form-control-lg" id="teacher_id" data-choices data-choices-removeItem name="teacher_id" multiple>
-                                    <option value="1">Choice 1</option>
-                                    <option value="2">Choice 2</option>
-                                    <option value="3">Choice 3</option>
-                                    <option value="4">Choice 4</option>
+                                <select class="form-control form-control-lg" id="user_id" data-choices data-choices-removeItem name="user_id" multiple>
+                                    <?php foreach ($users as $user) : ?>
+                                        <option value="<?= $user->user_id ?>"><?= $user->firstname ?> <?= $user->lastname ?></option>
+                                    <?php endforeach; ?>
                                 </select>
                             </div>
                             <div class="col-12">
@@ -187,12 +186,10 @@
 
     <!-- App js -->
     <script src="/assets/js/app.js"></script>
+
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
     <script>
-        jQuery(document).ready(function() {});
-
         jQuery(function() {
             jQuery('input#username').keyup(function() {
                 this.value = this.value.toLocaleUpperCase();
@@ -206,14 +203,11 @@
             });
         });
 
-        function test(id) {
+        function test() {
             var url = "<?= base_url('subject/test') ?>";
             $.ajax({
                 url: url,
                 method: "POST",
-                data: {
-                    'id': 21,
-                },
                 dataType: "json",
                 success: function(response) {
                     console.log(response);
@@ -269,13 +263,25 @@
                 },
                 dataType: "json",
                 success: function(response) {
-                    console.log(response);
+                    // console.log(response);
+
+                    $('#user_id option').each(function() {
+                        var optionValue = $(this).val(); // ดึงค่า value ของ option
+                        // ตรวจสอบว่ามีค่า optionValue ที่ตรงกับ response.data.subjects_access.user_id หรือไม่
+                        var isSelected = response.data.subjects_access.some(function(item) {
+                            return item.user_id === optionValue;
+                        });
+                        // ถ้ามีค่าตรงกัน ให้เพิ่ม attribute selected ให้กับ option
+                        if (isSelected) {
+                            $(this).attr('selected', 'selected');
+                        }
+                    });
+
                     if (response.status) {
                         var form = jQuery('form#updateSubjectAccessForm')
-                        form.find('input#teacher_id').val(response.data['0'].teacher_id);
-                        form.find('input#subject_id').val(response.data['0'].subject_id);
-                        form.find('input#user_update').val(response.data['0'].firstname + " " + response.data['0'].lastname);
-                        form.find('input#update_date').val(response.data['0'].update_date);
+                        form.find('input#subject_id').val(response.data.subjects_access['0'].subject_id);
+                        form.find('input#user_update').val(response.data.subjects_access['0'].firstname + " " + response.data.subjects_access['0'].lastname);
+                        form.find('input#update_date').val(response.data.subjects_access['0'].update_date);
                     } else {
                         console.error("Error retrieving user data:", response.message);
                     }

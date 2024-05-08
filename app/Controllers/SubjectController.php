@@ -105,16 +105,18 @@ class SubjectController extends BaseController
     public function index()
     {
         $SubjectModel = new SubjectModel();
-        $result['subjects'] = $SubjectModel->index();
+        $result = $SubjectModel->index();
         return view('subject/subject', $result);
+        // $result = $SubjectModel->test(21);
+        // print_r($result);
     }
 
     public function test($id)
     {
         $SubjectModel = new SubjectModel();
-        $result['datas'] = $SubjectModel->test($id);
+        $result = $SubjectModel->test($id);
         $jsonReturn = $this->jsonReturn($result);
-        return  $jsonReturn;
+        return $jsonReturn;
     }
 
     public function addSubject()

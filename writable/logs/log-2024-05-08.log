@@ -1,0 +1,252 @@
+ERROR - 2024-05-08 07:23:32 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'democlassflow', 3306, '', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\app\Models\AuthModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ClassFlow\app\Controllers\AuthController.php(130): App\Models\AuthModel->login(Array)
+#6 C:\xampp\htdocs\ClassFlow\app\Controllers\AuthController.php(84): App\Controllers\AuthController->login(Array)
+#7 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\AuthController->root('login')
+#8 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#3 C:\xampp\htdocs\ClassFlow\app\Models\AuthModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ClassFlow\app\Controllers\AuthController.php(130): App\Models\AuthModel->login(Array)
+#5 C:\xampp\htdocs\ClassFlow\app\Controllers\AuthController.php(84): App\Controllers\AuthController->login(Array)
+#6 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\AuthController->root('login')
+#7 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-08 07:23:32 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `teachers`.`room`
+FROM `users`
+LEFT JOIN `teachers` ON `teachers`.`user_id` = `users`.`user_id`
+WHERE `username` = :username:', [...], false)
+ 3 APPPATH\Models\AuthModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\AuthController.php(130): App\Models\AuthModel->login([...])
+ 5 APPPATH\Controllers\AuthController.php(84): App\Controllers\AuthController->login([...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->root('login')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+ERROR - 2024-05-08 07:23:36 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'democlassflow', 3306, '', 0)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 C:\xampp\htdocs\ClassFlow\app\Models\AuthModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ClassFlow\app\Controllers\AuthController.php(130): App\Models\AuthModel->login(Array)
+#6 C:\xampp\htdocs\ClassFlow\app\Controllers\AuthController.php(84): App\Controllers\AuthController->login(Array)
+#7 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\AuthController->root('login')
+#8 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\ClassFlow\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ClassFlow\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ClassFlow\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#3 C:\xampp\htdocs\ClassFlow\app\Models\AuthModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ClassFlow\app\Controllers\AuthController.php(130): App\Models\AuthModel->login(Array)
+#5 C:\xampp\htdocs\ClassFlow\app\Controllers\AuthController.php(84): App\Controllers\AuthController->login(Array)
+#6 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(932): App\Controllers\AuthController->root('login')
+#7 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 C:\xampp\htdocs\ClassFlow\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ClassFlow\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ClassFlow\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-08 07:23:36 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `teachers`.`room`
+FROM `users`
+LEFT JOIN `teachers` ON `teachers`.`user_id` = `users`.`user_id`
+WHERE `username` = :username:', [...], false)
+ 3 APPPATH\Models\AuthModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\AuthController.php(130): App\Models\AuthModel->login([...])
+ 5 APPPATH\Controllers\AuthController.php(84): App\Controllers\AuthController->login([...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->root('login')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-08 10:08:20 --> Call to a member function getResult() on array
+in APPPATH\Models\SubjectModel.php on line 14.
+ 1 APPPATH\Models\SubjectModel.php(73): App\Models\SubjectModel->returnList([...])
+ 2 APPPATH\Controllers\SubjectController.php(115): App\Models\SubjectModel->test([...])
+ 3 APPPATH\Controllers\SubjectController.php(99): App\Controllers\SubjectController->test([...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->root('test')
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-08 10:09:04 --> Call to a member function getResult() on array
+in APPPATH\Models\SubjectModel.php on line 14.
+ 1 APPPATH\Models\SubjectModel.php(73): App\Models\SubjectModel->returnList([...])
+ 2 APPPATH\Controllers\SubjectController.php(115): App\Models\SubjectModel->test([...])
+ 3 APPPATH\Controllers\SubjectController.php(99): App\Controllers\SubjectController->test([...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->root('test')
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-08 14:03:44 --> Call to a member function getResult() on array
+in APPPATH\Models\SubjectModel.php on line 59.
+ 1 APPPATH\Controllers\SubjectController.php(108): App\Models\SubjectModel->index()
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-08 14:03:45 --> Call to a member function getResult() on array
+in APPPATH\Models\SubjectModel.php on line 59.
+ 1 APPPATH\Controllers\SubjectController.php(108): App\Models\SubjectModel->index()
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-08 14:03:45 --> Call to a member function getResult() on array
+in APPPATH\Models\SubjectModel.php on line 59.
+ 1 APPPATH\Controllers\SubjectController.php(108): App\Models\SubjectModel->index()
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-08 14:03:45 --> Call to a member function getResult() on array
+in APPPATH\Models\SubjectModel.php on line 59.
+ 1 APPPATH\Controllers\SubjectController.php(108): App\Models\SubjectModel->index()
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-08 14:23:01 --> Invalid argument supplied for foreach()
+in APPPATH\Views\subject\subject.php on line 84.
+ 1 APPPATH\Views\subject\subject.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'C:\\xampp\\htdocs\\ClassFlow\\app\\Views\\subject\\subject.php', 84, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ClassFlow\\app\\Views\\subject\\subject.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('subject/subject', [], true)
+ 5 APPPATH\Controllers\SubjectController.php(109): view('subject/subject', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-08 14:23:14 --> Cannot use object of type stdClass as array
+in APPPATH\Views\subject\subject.php on line 85.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('subject/subject', [], true)
+ 4 APPPATH\Controllers\SubjectController.php(109): view('subject/subject', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-08 14:23:47 --> Cannot use object of type stdClass as array
+in APPPATH\Views\subject\subject.php on line 85.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('subject/subject', [], true)
+ 4 APPPATH\Controllers\SubjectController.php(109): view('subject/subject', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-08 14:25:05 --> Invalid argument supplied for foreach()
+in APPPATH\Views\subject\subject.php on line 84.
+ 1 APPPATH\Views\subject\subject.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'C:\\xampp\\htdocs\\ClassFlow\\app\\Views\\subject\\subject.php', 84, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ClassFlow\\app\\Views\\subject\\subject.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('subject/subject', [], true)
+ 5 APPPATH\Controllers\SubjectController.php(109): view('subject/subject', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-08 14:25:33 --> syntax error, unexpected ')'
+in APPPATH\Views\subject\subject.php on line 84.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('subject/subject', [], true)
+ 3 APPPATH\Controllers\SubjectController.php(109): view('subject/subject', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-08 14:28:36 --> Cannot use object of type stdClass as array
+in APPPATH\Views\subject\subject.php on line 85.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('subject/subject', [], true)
+ 4 APPPATH\Controllers\SubjectController.php(109): view('subject/subject', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-08 14:36:57 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\SubjectController.php on line 116.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-08 14:36:58 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\SubjectController.php on line 116.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-08 14:37:07 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\SubjectController.php on line 117.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-08 14:42:06 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\SubjectController.php on line 114.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
+CRITICAL - 2024-05-08 14:42:07 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\SubjectController.php on line 114.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SubjectController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\ClassFlow\\public\\index.php')
