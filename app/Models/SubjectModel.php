@@ -51,20 +51,16 @@ class SubjectModel extends Model
     {
         $user_id =  session()->get('user_id');
         $db = \Config\Database::connect();
-        $query['users'] = $db->table('users')
-            ->select('users.user_id, users.firstname, users.lastname')
-            ->where('users.role', 'teacher')
-            ->get()
-            ->getResult();
         $query['subjects'] = $db->table('subjects')
-            ->select('subjects.subject_id, subjects.subject_code, subjects.subject_name')
+            ->select('subjects.subject_id, subjects.subject_code, subjects.subject_name, users.firstname, users.lastname')
             ->join('subjects_access', 'subjects.subject_id = subjects_access.subject_id')
+            ->join('users', 'users.user_id = subjects.user_update')
             ->where('subjects_access.user_id', $user_id)
             ->get()
             ->getResult();
         return $query;
     }
-  
+
     function updateSubjectForm($id)
     {
         $db = \Config\Database::connect();
@@ -82,10 +78,10 @@ class SubjectModel extends Model
         // $user_id =  session()->get('user_id');
         $db = \Config\Database::connect();
         $query['users'] = $db->table('users')
-        ->select('users.user_id, users.firstname, users.lastname')
-        ->where('users.role', 'teacher')
-        ->get()
-        ->getResult();
+            ->select('users.user_id, users.firstname, users.lastname')
+            ->where('users.role', 'teacher')
+            ->get()
+            ->getResult();
         $query['subjects_access'] = $db->table('subjects_access')
             ->select('
             subjects_access.subject_id,
@@ -102,20 +98,15 @@ class SubjectModel extends Model
         return $query;
     }
 
-    function test($id)
+    function test()
     {
+        $user_id =  session()->get('user_id');
         $db = \Config\Database::connect();
-        $query['subjects_access'] = $db->table('subjects_access')
-            ->select('
-            subjects_access.subject_id,
-            subjects_access.user_update,
-            subjects_access.update_date,
-            subjects_access.user_id,
-            users.firstname,
-            users.lastname
-             ')
-            ->join('users', 'subjects_access.user_id = users.user_id')
-            ->where('subjects_access.subject_id', $id)
+        $query['subjects'] = $db->table('subjects')
+            ->select('subjects.subject_id, subjects.subject_code, subjects.subject_name, users.firstname, users.lastname')
+            ->join('subjects_access', 'subjects.subject_id = subjects_access.subject_id')
+            ->join('users', 'users.user_id = subjects.user_update')
+            ->where('subjects_access.user_id', $user_id)
             ->get()
             ->getResult();
         return $query;

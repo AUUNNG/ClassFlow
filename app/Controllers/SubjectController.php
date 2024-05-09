@@ -111,10 +111,10 @@ class SubjectController extends BaseController
         // print_r($result);
     }
 
-    public function test($id)
+    public function test()
     {
         $SubjectModel = new SubjectModel();
-        $result = $SubjectModel->test($id);
+        $result = $SubjectModel->test();
         $jsonReturn = $this->jsonReturn($result);
         return $jsonReturn;
     }

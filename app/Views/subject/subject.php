@@ -17,7 +17,7 @@
 
     <div id="space" class="my-1 my-md-5" style="height: 1px;"></div>
     <div class="container card p-5">
-        <button type="button" class="btn btn-primary" onclick="test(<?= esc($subject->subject_id); ?>)">test</button>
+        <button type="button" class="btn btn-primary" onclick="test()">test</button>
         <h1>Subject</h1>
         <?php if (empty($subjects)) { ?>
             <div class="rounded bg-light d-flex flex-column justify-content-center align-items-center" style="height: 200px;">
@@ -25,32 +25,58 @@
                 <?php echo $subjects['0']; ?>
             </div>
         <?php } else { ?>
-            <div class="row p-3 g-3 mt-3 rounded bg-light">
-                <?php foreach ($subjects as $subject) : ?>
-                    <div class="col-xxl-6 col-lg-6">
-                        <div class="card card-body mb-0">
-                            <div class="d-flex flex-row">
-                                <div class="avatar-md mb-3">
-                                    <div class="avatar-title bg-primary-subtle text-primary fs-17 rounded">
-                                        <i class="ri-book-2-line"></i>
+            <div class="table-responsive table-card mt-3 mb-1">
+                <table class="table align-middle table-nowrap" id="customerTable">
+                    <thead class="table-light">
+                        <tr>
+                            <th class="sort" data-sort="customer_name">Subject Code</th>
+                            <th class="sort" data-sort="email">Subject Name</th>
+                            <th class="sort" data-sort="phone">Update By</th>
+                            <th class="sort" data-sort="action">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="list form-check-all">
+                        <?php foreach ($subjects as $subject) : ?>
+                        <tr>
+                            <td id="subject_code"><?= $subject->subject_code ?></td>
+                            <td id="subject_name"><?= $subject->subject_name ?></td>
+                            <td id="user_update"><?= $subject->firstname . " " . $subject->lastname ?></td>
+                            <td>
+                                <div class="row row-cols-2 g-1">
+                                    <div class="col d-grid">
+                                        <button class="btn btn-sm btn-primary edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal">Update</button>
+                                    </div>
+                                    <div class="col d-grid">
+                                        <a class="btn btn-sm btn-secondary remove-item-btn" href="<?= base_url('subject/access/'); ?><?= $subject->subject_id ?>">Access</a>
                                     </div>
                                 </div>
-                                <div class="ms-4">
-                                    <h1 class=""><?= esc($subject->subject_name); ?></h1>
-                                    <span class=""><?= esc($subject->subject_code); ?></span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col d-grid">
-                                    <button type="button" class="btn btn-primary" onclick="updateSubjectForm(<?= esc($subject->subject_id); ?>)" data-bs-toggle="modal" data-bs-target="#updateSubjectForm">Details</button>
-                                </div>
-                                <div class="col d-grid">
-                                    <button type="button" class="btn btn-secondary" onclick="updateSubjectAccessForm(<?= esc($subject->subject_id); ?>)" data-bs-toggle="modal" data-bs-target="#updateSubjectAccessForm">Aceess</button>
-                                </div>
-                            </div>
-                        </div>
+                            </td>
+                        </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+                <div class="noresult" style="display: none">
+                    <div class="text-center">
+                        <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#121331,secondary:#08a88a" style="width:75px;height:75px"></lord-icon>
+                        <h5 class="mt-2">Sorry! No Result Found</h5>
+                        <p class="text-muted mb-0">We've searched more than 150+ Orders We did not find any orders for you search.</p>
                     </div>
-                <?php endforeach; ?>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-end">
+                <div class="pagination-wrap hstack gap-2" style="display: flex;">
+                    <a class="page-item pagination-prev disabled" href="javascript:void(0);">
+                        Previous
+                    </a>
+                    <ul class="pagination listjs-pagination mb-0">
+                        <li class="active"><a class="page" href="#" data-i="1" data-page="8">1</a></li>
+                        <li><a class="page" href="#" data-i="2" data-page="8">2</a></li>
+                    </ul>
+                    <a class="page-item pagination-next" href="javascript:void(0);">
+                        Next
+                    </a>
+                </div>
             </div>
         <?php } ?>
     </div>
@@ -77,14 +103,6 @@
                                     <div class="form-text">Last Updated Time</div>
                                     <input type="text" class="form-control form-control-lg" id="update_date" name="update_date" value="" placeholder="" disabled>
                                 </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-text">Access</div>
-                                <select class="form-control form-control-lg" id="user_id" data-choices data-choices-removeItem name="user_id" multiple>
-                                    <?php foreach ($users as $user) : ?>
-                                        <option value="<?= $user->user_id ?>"><?= $user->firstname ?> <?= $user->lastname ?></option>
-                                    <?php endforeach; ?>
-                                </select>
                             </div>
                             <div class="col-12">
                                 <div class="d-grid">
